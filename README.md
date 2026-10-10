@@ -6,8 +6,8 @@ We're using GitHub to make our work more transparent, encourage student particip
 
 ## What's here?
 
-- **Roadmap** — Our current priorities, plans and ongoing initiatives.
-- **Discussions & proposals** — Ideas for events, workshops, projects and improvements, tracked through GitHub Issues.
+- **[Roadmap](ROADMAP.md)** — Our current priorities, plans and ongoing initiatives.
+- **[Discussions & proposals](https://github.com/portsmouth-ai-society/society/issues)** — Ideas for events, workshops, projects and improvements, tracked through GitHub Issues.
 - **Decisions** — A public record of important society decisions and their outcomes.
 - **Resources** — Documentation and information that can help members and future committees.
 
@@ -17,7 +17,7 @@ We'll add resources as they're needed, keeping things simple and useful.
 
 The society is shaped by its members.
 
-Have an idea for a workshop, project, event or something we could improve? Open an Issue to share your suggestion or contribute to an existing discussion.
+Have an idea for a workshop, project, event or something we could improve? [Open an Issue](https://github.com/portsmouth-ai-society/society/issues/new?template=suggestion.md) to share your suggestion or contribute to an existing discussion.
 
 You don't need to be on the committee or have technical experience to get involved.
 
