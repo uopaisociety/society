@@ -2,7 +2,7 @@
 name: Suggestion
 about: Suggest an idea or improvement for the AI Society
 title: ""
-labels: []
+labels: ["suggestion"]
 assignees: []
 ---
 
