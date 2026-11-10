@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1400" height="400" viewBox="0 0 1400 400" role="img" aria-labelledby="title description">
+  <title id="title">AI Society marine gradient</title>
+  <desc id="description">A soft-focus, textured slate-blue and marine-blue gradient.</desc>
+  <defs>
+    <filter id="paper-grain" filterUnits="userSpaceOnUse" x="0" y="0" width="1400" height="400" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".68" numOctaves="3" seed="23" result="noise" />
+      <feColorMatrix in="noise" type="matrix" result="dark-grain" values="         0 0 0 0 .06667         0 0 0 0 .09412         0 0 0 0 .12549         .30 0 0 0 -.118" />
+      <feColorMatrix in="noise" type="matrix" result="light-grain" values="         0 0 0 0 .96863         0 0 0 0 .96078         0 0 0 0 .94118         -.23 0 0 0 .121" />
+      <feComposite in="light-grain" in2="dark-grain" operator="over" />
+    </filter>
+    <linearGradient id="marine-base" gradientUnits="userSpaceOnUse" x1="70" y1="340" x2="1340" y2="30">
+      <stop offset="0" stop-color="#09334E" stop-opacity="1" />
+      <stop offset="0.52" stop-color="#073B5C" stop-opacity="1" />
+      <stop offset="1" stop-color="#0B3D5B" stop-opacity="1" />
+    </linearGradient>
+    <radialGradient id="slate-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(255 36) rotate(7) scale(698 335)">
+      <stop offset="0" stop-color="#668998" stop-opacity="0.7" />
+      <stop offset="0.5" stop-color="#668998" stop-opacity="0.413" />
+      <stop offset="1" stop-color="#668998" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="lower-navy" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(383 381) rotate(-11) scale(614 249)">
+      <stop offset="0" stop-color="#06283F" stop-opacity="0.72" />
+      <stop offset="0.5" stop-color="#06283F" stop-opacity="0.42479999999999996" />
+      <stop offset="1" stop-color="#06283F" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="upper-navy" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1071 -53) rotate(-12) scale(593 249)">
+      <stop offset="0" stop-color="#062B44" stop-opacity="0.84" />
+      <stop offset="0.5" stop-color="#062B44" stop-opacity="0.49559999999999993" />
+      <stop offset="1" stop-color="#062B44" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="far-shore" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1252 338) rotate(-18) scale(534 261)">
+      <stop offset="0" stop-color="#5B7F90" stop-opacity="0.55" />
+      <stop offset="0.5" stop-color="#5B7F90" stop-opacity="0.3245" />
+      <stop offset="1" stop-color="#5B7F90" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="soft-current" gradientUnits="userSpaceOnUse" x1="160" y1="80" x2="1308" y2="332">
+      <stop offset="0" stop-color="#648697" stop-opacity="0.45" />
+      <stop offset="0.24" stop-color="#5A8293" stop-opacity="0.69" />
+      <stop offset="0.5" stop-color="#76949D" stop-opacity="0.68" />
+      <stop offset="0.76" stop-color="#456F84" stop-opacity="0.36" />
+      <stop offset="1" stop-color="#72929D" stop-opacity="0.57" />
+    </linearGradient>
+    <filter id="shadow-blur" filterUnits="userSpaceOnUse" x="-600" y="-600" width="2600" height="1600" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="62" />
+    </filter>
+    <filter id="current-blur" filterUnits="userSpaceOnUse" x="-600" y="-600" width="2600" height="1600" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+  </defs>
+  <g id="gradient-colour" inkscape:groupmode="layer" inkscape:label="Gradient colour">
+    <g id="mesh-field">
+      <rect width="1400" height="400" fill="url(#marine-base)" />
+      <rect width="1400" height="400" fill="url(#slate-light)" />
+      <rect width="1400" height="400" fill="url(#lower-navy)" />
+      <rect width="1400" height="400" fill="url(#upper-navy)" />
+      <rect width="1400" height="400" fill="url(#far-shore)" />
+    </g>
+    <path id="shadow-drift" d="M-165 148C112 67 227 124 410 216C579 303 662 339 818 266C974 193 1041 184 1190 282C1321 369 1457 391 1578 341" fill="none" stroke="#062841" stroke-width="139" stroke-linecap="round" filter="url(#shadow-blur)" opacity="0.58" />
+    <path id="light-drift" d="M-180 23C84 -40 241 -1 399 104C539 198 635 258 789 197C938 136 1054 151 1170 235C1295 324 1448 368 1588 311" fill="none" stroke="url(#soft-current)" stroke-width="120" stroke-linecap="round" filter="url(#current-blur)" opacity="1" />
+  </g>
+  <g id="gradient-grain" inkscape:groupmode="layer" inkscape:label="Fine grain">
+    <rect id="grain" width="1400" height="400" fill="#073B5C" filter="url(#paper-grain)" opacity="0.8" />
+  </g>
+</svg>
