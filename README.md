@@ -7,6 +7,7 @@ We're using GitHub to make our work more transparent, encourage student particip
 ## What's here?
 
 - **[Roadmap](ROADMAP.md)** — Our current priorities, plans and ongoing initiatives.
+- **[Brand](brand/)** — Logo, lockup, background and avatar SVGs for posts and documents.
 - **[Discussions & proposals](https://github.com/portsmouth-ai-society/society/issues)** — Ideas for events, workshops, projects and improvements, tracked through GitHub Issues.
 - **Decisions** — A public record of important society decisions and their outcomes.
 - **Resources** — Documentation and information that can help members and future committees.
