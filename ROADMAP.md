@@ -1,35 +1,39 @@
 # AI Society Roadmap — 2026/27
 
-This roadmap outlines the current priorities and direction of the University of Portsmouth AI Society.
+Current direction for the University of Portsmouth AI Society while we rebuild for 2026/27.
 
-We're rebuilding the society around learning, experimentation, collaboration and making AI more accessible to students from all backgrounds.
+We're a free, beginners-welcome, student-led UPSU society. We want students to learn, build and connect. This page is a living document: confirmed items are dated, and everything else is **TBC** until we book it.
 
-This is a living document, not a fixed schedule. Our priorities will evolve based on member interests, opportunities and available resources.
+*Updated 10 November 2026.*
+
+## Already happened
+
+- **Intro session** — 26 March 2026
+- **Website-building workshop** — 29 April 2026
+- **Intro meeting** — 5 November 2026
 
 ## Current priorities
 
-- **Build our community** — Grow an active, welcoming society where students can connect, share ideas and learn from each other.
-- **Organise our first workshops** — Plan practical, beginner-friendly sessions where members can explore AI tools and build something themselves.
-- **Establish our GitHub presence** — Create a shared space for resources, projects, planning and contributions.
-- **Encourage participation** — Make it easy for members to propose events, suggest improvements and get involved.
+- **Welcome members in** — A society students from any course can join, including complete beginners.
+- **Keep sessions going** — Practical, beginner-friendly workshops and meetings. Next dates **TBC**.
+- **Plan in the open** — Use this repository for the roadmap, suggestions and shared resources.
+- **Make it easy to take part** — Any member can propose an event or project.
 
-## What's next?
+## What's next
 
-- **Collaborative projects** — Explore opportunities for members to build AI-related projects together.
-- **Technical events** — Organise build nights, demonstrations and sessions exploring different areas of AI.
-- **Industry connections** — Explore potential collaborations with companies, researchers and professionals working in AI.
-- **Shared resources** — Publish workshop materials, code and useful learning resources for members and future students.
+Directions for the rest of 2026/27. Timing for each one is **TBC**.
+
+- **Collaborative projects** — Members building something together. Format **TBC**.
+- **Technical sessions** — Build nights and short demos. Topics and dates **TBC**.
+- **Industry connections** — Time with people working in AI. Format **TBC**.
+- **Shared resources** — Workshop notes and learning material, added here as we make them.
 
 ## Looking ahead
 
-We want to build a society that continues to grow beyond any individual committee.
+We want the society to outlast any one committee: student projects, reusable resources, and a community that new members can join easily.
 
-Over time, we aim to develop a collection of student projects, reusable educational resources and a community where members can learn from one another.
+## Help shape this
 
-## Help shape our roadmap
+Have an idea for an event, workshop, project or improvement? [Open a GitHub issue](https://github.com/uopaisociety/society/issues).
 
-**This roadmap belongs to the community.**
-
-Have an idea for an event, workshop, project or improvement? [Open a GitHub Issue](https://github.com/portsmouth-ai-society/society/issues) to share it.
-
-We'll use Issues to discuss proposals, track specific initiatives and document progress. This roadmap will be updated when our priorities change.
+We'll use issues to discuss proposals and update this roadmap when priorities change.
