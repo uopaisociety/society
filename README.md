@@ -1,29 +1,39 @@
 # AI Society — Society Repository
 
-This is the central repository for the University of Portsmouth AI Society's planning, organisation and activities.
+University of Portsmouth's student-led AI community. Beginners welcome. Learn, build and connect through workshops, projects and events.
 
-We're using GitHub to make our work more transparent, encourage student participation and preserve knowledge between committees.
+We're a free [UPSU](https://upsu.net/groups/8f8dp/ai-society) society, being rebuilt for 2026/27. This repository is where we keep planning, decisions and shared resources in the open, so the next committee can build on this one.
+
+**President:** Carlos Mezquita
 
 ## What's here?
 
-- **[Roadmap](ROADMAP.md)** — Our current priorities, plans and ongoing initiatives.
+- **[Roadmap](ROADMAP.md)** — Priorities for the 2026/27 rebuild.
 - **[Brand](brand/)** — Logo, lockup, background and avatar SVGs for posts and documents.
-- **[Discussions & proposals](https://github.com/portsmouth-ai-society/society/issues)** — Ideas for events, workshops, projects and improvements, tracked through GitHub Issues.
-- **Decisions** — A public record of important society decisions and their outcomes.
-- **Resources** — Documentation and information that can help members and future committees.
+- **[Discussions & proposals](https://github.com/uopaisociety/society/issues)** — Ideas for events, workshops, projects and improvements.
+- **Decisions** — A public record of important society decisions.
+- **Resources** — Notes and materials for members and future committees.
 
-We'll add resources as they're needed, keeping things simple and useful.
+We'll add resources as they're needed.
 
-## Get involved
+## Join us
 
-The society is shaped by its members.
+Membership is free. Beginners are welcome, and you can take part without a committee role or a technical background.
 
-Have an idea for a workshop, project, event or something we could improve? [Open an Issue](https://github.com/portsmouth-ai-society/society/issues/new?template=suggestion.md) to share your suggestion or contribute to an existing discussion.
+- [Join on UPSU](https://upsu.net/groups/8f8dp/ai-society)
+- [Linktree](https://linktr.ee/uopaisociety)
+- [Instagram](https://instagram.com/uopaisociety)
+- [X](https://x.com/uopaisociety)
+- [LinkedIn](https://www.linkedin.com/company/aisocietyuop)
+- [Events on Luma](https://luma.com/uopaisociety)
+- **Email:** [aisociety@upsu.net](mailto:aisociety@upsu.net)
 
-You don't need to be on the committee or have technical experience to get involved.
+Have an idea for a workshop, project or event? [Open an issue](https://github.com/uopaisociety/society/issues/new?template=suggestion.md).
+
+Our [Code of Conduct](https://github.com/uopaisociety/.github/blob/main/CODE_OF_CONDUCT.md) covers society activities and online spaces.
 
 ## Transparency & continuity
 
-We aim to keep our planning and decisions open wherever practical, while respecting privacy and confidentiality.
+We keep planning and decisions open wherever practical, and we keep private or sensitive matters off this repository.
 
-This repository belongs to the society, not any individual committee. It will be maintained across academic years so future committees can build on previous work rather than start from scratch.
+This repository belongs to the society. It stays with us across academic years so future committees can continue the work.
