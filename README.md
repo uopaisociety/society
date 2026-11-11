@@ -32,6 +32,10 @@ Have an idea for a workshop, project or event? [Open an issue](https://github.co
 
 Our [Code of Conduct](https://github.com/uopaisociety/.github/blob/main/CODE_OF_CONDUCT.md) covers society activities and online spaces.
 
+## Partner With Us / Sponsorships
+
+Work with Portsmouth student builders through a one-event pilot, a recruitment programme or a technical challenge. Read [Sponsorships](SPONSORS.md) or open the [interactive partnership prospectus](https://uopaisociety.github.io/society/brand/partnerships/) ([HTML source](brand/partnerships/index.html)).
+
 ## Transparency & continuity
 
 We keep planning and decisions open wherever practical, and we keep private or sensitive matters off this repository.
