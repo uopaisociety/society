@@ -11,12 +11,12 @@ Use **AI Society** in everyday copy, **University of Portsmouth AI Society** on 
 | `slate-blue` | `#668998` | Soft blue highlights in the mesh |
 | `cream` | `#F7F5F0` | Light end of the gradient, text and marks on navy |
 
-The templates use the soft-focus marine mesh and fine grain from [background.svg](background.svg). A cream field blends into the blue from the right, top or bottom, depending on the layout. Keep copy and logos inside their navy or cream areas, away from the transition. Use navy ink on cream and cream ink on navy.
+The social pack uses three grainy backgrounds. **Marine** uses broad cream-tinted highlights over navy for bold headlines and opening slides. **Hybrid** follows the approved diagonal curve, with cream widening toward the lower right. On the carousel closing slide the same curve rotates toward the bottom to leave room for logistics. **Cream** uses a slate wash behind screenshots and information-heavy layouts. Use navy lettering on cream and cream lettering on marine, with the gradient transition clear of small text.
 
 - **Headlines** use Inter Tight at 700 or 800 with −0.03em tracking. Use an italic accent line when it reads naturally.
 - **Metadata** uses JetBrains Mono. Set times in 24-hour UK format.
 - **Body copy** uses Inter at 400, 500 or 600. Keep it short enough to read at feed size.
-- **Spacing** uses an 8 px base unit, 1.5 px hairlines and 2 px screenshot borders. See [tokens.json](tokens.json) for the cream gradient stops, grain settings and per-format safe insets. The template SVGs embed the mesh and gradient definitions so they can render individually.
+- **Spacing** uses an 8 px base unit, 1.5 px hairlines and 2 px screenshot borders. See [tokens.json](tokens.json) for treatments, grain settings and per-format safe insets. Each template embeds its gradient and logo so it can render on its own. For editable examples of each background, open the WhatsApp reminder (marine), announcement (hybrid) or showcase (cream).
 
 ## Logos
 
@@ -28,21 +28,41 @@ The templates use the soft-focus marine mesh and fine grain from [background.svg
 
 The SVGs use the original wave-mark and lettering outlines. Give the logo breathing room and keep its proportions. The marine-navy [stacked logo](logo.svg) and [university lockup](lockup-uop.svg) are available for light backgrounds. Use the original [textured avatar](avatar-textured.svg) for profile pictures and the original [marine gradient](background.svg) where earlier collateral calls for it.
 
-## Templates
+## WhatsApp
 
-| Template | Size | Use |
-| --- | --- | --- |
-| [WhatsApp banner](templates/whatsapp-banner-2x1.svg) | 1600 × 800 | Announcement or reminder with one CTA |
-| [WhatsApp showcase](templates/whatsapp-showcase-2x1.svg) | 1600 × 800 | Copy and a playable demo screenshot |
-| [Instagram 01 · Hook](templates/ig-carousel-01-hook-4x5.svg) | 1080 × 1350 | Open with one clear idea |
-| [Instagram 02 · Screenshot](templates/ig-carousel-02-screen-4x5.svg) | 1080 × 1350 | Show a project, demo or event image |
-| [Instagram 03 · Grid](templates/ig-carousel-03-grid-4x5.svg) | 1080 × 1350 | Four prompts, features or tracks |
-| [Instagram 04 · CTA](templates/ig-carousel-04-cta-4x5.svg) | 1080 × 1350 | Date, logistics and action with the university lockup |
-| [Luma cover](templates/luma-cover-16x9.svg) | 1920 × 1080 | Event cover or presentation title slide |
-| [Social OG card](templates/social-og-card.svg) | 2400 × 1256 | Open Graph, LinkedIn and GitHub link previews |
-| [UPSU header](templates/upsu-header.svg) | 1640 × 856 | Centred tagline and logo for variable header crops |
+| Delivery | Template | Size | Treatment |
+| --- | --- | --- | --- |
+| Announce a workshop, collaboration or sign-up | [Announcement](templates/whatsapp-banner-2x1.svg) | 1600 × 800 | Hybrid |
+| Send a day-of reminder or room change | [Reminder](templates/whatsapp-reminder-2x1.svg) | 1600 × 800 | Marine |
+| Share a demo, member project or event recap | [Showcase](templates/whatsapp-showcase-2x1.svg) | 1600 × 800 | Cream |
+| Cross-post a compact graphic | [Square announcement](templates/ig-post-square-1x1.svg) | 1080 × 1080 | Marine |
+| Post to Status | [Story and Status](templates/ig-story-status-9x16.svg) | 1080 × 1920 | Marine |
 
-The templates use short placeholders for headings, details and calls to action. Fill the slots that suit the post and clear the remaining placeholders. Use the direct event link from Luma or the playable demo link where relevant.
+Pair a chat graphic with short message copy and one tappable link or poll. For reminders, put the time and room in the message too.
+
+## Instagram
+
+| Delivery | Template | Size | Treatment |
+| --- | --- | --- | --- |
+| Standalone event or recruitment post | [Portrait event post](templates/ig-post-event-4x5.svg) | 1080 × 1350 | Cream |
+| Short announcement or cross-post | [Square announcement](templates/ig-post-square-1x1.svg) | 1080 × 1080 | Marine |
+| Story or vertical reminder | [Story and Status](templates/ig-story-status-9x16.svg) | 1080 × 1920 | Marine |
+| Carousel opening hook | [01 · Hook](templates/ig-carousel-01-hook-4x5.svg) | 1080 × 1350 | Marine |
+| Carousel screenshot or photo | [02 · Showcase](templates/ig-carousel-02-screen-4x5.svg) | 1080 × 1350 | Cream |
+| Carousel agenda, highlights or prompts | [03 · Grid](templates/ig-carousel-03-grid-4x5.svg) | 1080 × 1350 | Cream |
+| Carousel logistics and next step | [04 · CTA](templates/ig-carousel-04-cta-4x5.svg) | 1080 × 1350 | Hybrid |
+
+Build a carousel with the hook first, the showcase or grid slides that fit the story, and one closing CTA. Use the portrait event post when a single image can carry the essential details. On Stories, keep text in the central area and add the link sticker in the app. The vertical template leaves 300 px at the top and bottom as working margins. Preview the final placement with the app controls visible.
+
+## Other formats
+
+| Delivery | Template | Size | Treatment |
+| --- | --- | --- | --- |
+| Luma event cover or presentation title slide | [Luma cover](templates/luma-cover-16x9.svg) | 1920 × 1080 | Marine |
+| LinkedIn, GitHub or Open Graph link preview | [Social preview](templates/social-og-card.svg) | 2400 × 1256 | Hybrid |
+| Students’ Union society page header | [UPSU header](templates/upsu-header.svg) | 1640 × 856 | Cream |
+
+Fill the slots that suit the post and clear unused placeholders. For events, use the confirmed date, time, venue and direct link from the Luma listing. For demos, use the playable project link where available.
 
 ## Edit SVG slots
 

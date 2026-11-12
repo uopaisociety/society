@@ -16,23 +16,12 @@
         --font-sans: 'Inter', system-ui, sans-serif;
       }
     </style>
-    <!-- Marine mesh and paper grain from ../background.svg. -->
-    <filter id="paper-grain" filterUnits="objectBoundingBox" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency=".68" numOctaves="3" seed="23" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" result="dark-grain" values="         0 0 0 0 .06667         0 0 0 0 .09412         0 0 0 0 .12549         .30 0 0 0 -.118"/>
-      <feColorMatrix in="noise" type="matrix" result="light-grain" values="         0 0 0 0 .96863         0 0 0 0 .96078         0 0 0 0 .94118         -.23 0 0 0 .121"/>
-      <feComposite in="light-grain" in2="dark-grain" operator="over"/>
-    </filter>
+    <!-- Colour fields and grain from the AI Society gradient proof. -->
     <linearGradient id="marine-base" gradientUnits="userSpaceOnUse" x1="70" y1="340" x2="1340" y2="30">
       <stop offset="0" stop-color="#09334E" stop-opacity="1"/>
       <stop offset="0.52" stop-color="#073B5C" stop-opacity="1"/>
       <stop offset="1" stop-color="#0B3D5B" stop-opacity="1"/>
     </linearGradient>
-    <radialGradient id="slate-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(255 36) rotate(7) scale(698 335)">
-      <stop offset="0" stop-color="#668998" stop-opacity="0.7"/>
-      <stop offset="0.5" stop-color="#668998" stop-opacity="0.413"/>
-      <stop offset="1" stop-color="#668998" stop-opacity="0"/>
-    </radialGradient>
     <radialGradient id="lower-navy" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(383 381) rotate(-11) scale(614 249)">
       <stop offset="0" stop-color="#06283F" stop-opacity="0.72"/>
       <stop offset="0.5" stop-color="#06283F" stop-opacity="0.42479999999999996"/>
@@ -43,30 +32,43 @@
       <stop offset="0.5" stop-color="#062B44" stop-opacity="0.49559999999999993"/>
       <stop offset="1" stop-color="#062B44" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="far-shore" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1252 338) rotate(-18) scale(534 261)">
-      <stop offset="0" stop-color="#5B7F90" stop-opacity="0.55"/>
-      <stop offset="0.5" stop-color="#5B7F90" stop-opacity="0.3245"/>
-      <stop offset="1" stop-color="#5B7F90" stop-opacity="0"/>
+    <radialGradient id="marine-key-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(306 -63) rotate(11) scale(892 284)">
+      <stop offset="0" stop-color="#F7F5F0" stop-opacity=".44"/>
+      <stop offset=".2" stop-color="#F7F5F0" stop-opacity=".41"/>
+      <stop offset=".44" stop-color="#F7F5F0" stop-opacity=".29"/>
+      <stop offset=".68" stop-color="#D5E1E0" stop-opacity=".13"/>
+      <stop offset=".88" stop-color="#9CB4BD" stop-opacity=".035"/>
+      <stop offset="1" stop-color="#9CB4BD" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="soft-current" gradientUnits="userSpaceOnUse" x1="160" y1="80" x2="1308" y2="332">
-      <stop offset="0" stop-color="#648697" stop-opacity="0.45"/>
-      <stop offset="0.24" stop-color="#5A8293" stop-opacity="0.69"/>
-      <stop offset="0.5" stop-color="#76949D" stop-opacity="0.68"/>
-      <stop offset="0.76" stop-color="#456F84" stop-opacity="0.36"/>
-      <stop offset="1" stop-color="#72929D" stop-opacity="0.57"/>
-    </linearGradient>
-    <filter id="shadow-blur" filterUnits="userSpaceOnUse" x="-112" y="-80" width="1624" height="560" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="62"/>
+    <radialGradient id="marine-edge-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1478 365) rotate(-16) scale(645 255)">
+      <stop offset="0" stop-color="#F7F5F0" stop-opacity=".35"/>
+      <stop offset=".22" stop-color="#F7F5F0" stop-opacity=".32"/>
+      <stop offset=".46" stop-color="#D5E1E0" stop-opacity=".22"/>
+      <stop offset=".72" stop-color="#AEC4CB" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#AEC4CB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="marine-reflection" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(664 187) rotate(12) scale(567 217)">
+      <stop offset="0" stop-color="#668998" stop-opacity=".28"/>
+      <stop offset=".39" stop-color="#668998" stop-opacity=".21"/>
+      <stop offset=".72" stop-color="#668998" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#668998" stop-opacity="0"/>
+    </radialGradient>
+    <symbol id="marine-mesh" viewBox="0 0 1400 400" preserveAspectRatio="none">
+      <g id="mesh-field">
+        <rect width="1400" height="400" fill="url(#marine-base)"/>
+        <rect width="1400" height="400" fill="url(#lower-navy)"/>
+        <rect width="1400" height="400" fill="url(#upper-navy)"/>
+      </g>
+      <rect width="1400" height="400" fill="url(#marine-reflection)"/>
+      <rect width="1400" height="400" fill="url(#marine-key-light)"/>
+      <rect width="1400" height="400" fill="url(#marine-edge-light)"/>
+    </symbol>
+    <filter id="fine-grain" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" seed="23" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="shadow-grain" values="0 0 0 0 .0667  0 0 0 0 .0941  0 0 0 0 .1255  .34 0 0 0 -.142"/>
+      <feColorMatrix in="noise" type="matrix" result="light-grain" values="0 0 0 0 .9686  0 0 0 0 .9608  0 0 0 0 .9412  -.32 0 0 0 .175"/>
+      <feComposite in="light-grain" in2="shadow-grain" operator="over"/>
     </filter>
-    <filter id="current-blur" filterUnits="userSpaceOnUse" x="-112" y="-80" width="1624" height="560" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="30"/>
-    </filter>
-    <linearGradient id="cream-field" x1="61%" y1="61%" x2="57%" y2="86%">
-      <stop offset="0%" stop-color="#F7F5F0" stop-opacity="0"/>
-      <stop offset="23%" stop-color="#F7F5F0" stop-opacity="0.14"/>
-      <stop offset="62%" stop-color="#F7F5F0" stop-opacity="0.76"/>
-      <stop offset="100%" stop-color="#F7F5F0" stop-opacity="1"/>
-    </linearGradient>
     <symbol id="brand-logo" viewBox="172 248 692 583">
       <g transform="translate(-22 0) translate(-575.84993366 -793.24494091) scale(4.2459962354)" id="logo-artwork" fill="currentColor">
         <g transform="translate(600 314) scale(1.2) translate(-600 -314)">
@@ -88,23 +90,12 @@
   </defs>
   <svg id="brand-background" width="1080" height="1350" viewBox="0 0 1400 400"
        preserveAspectRatio="none" aria-hidden="true">
-    <g id="gradient-colour">
-      <g id="mesh-field">
-        <rect width="1400" height="400" fill="url(#marine-base)"/>
-        <rect width="1400" height="400" fill="url(#slate-light)"/>
-        <rect width="1400" height="400" fill="url(#lower-navy)"/>
-        <rect width="1400" height="400" fill="url(#upper-navy)"/>
-        <rect width="1400" height="400" fill="url(#far-shore)"/>
-      </g>
-      <path id="shadow-drift" d="M-165 148C112 67 227 124 410 216C579 303 662 339 818 266C974 193 1041 184 1190 282C1321 369 1457 391 1578 341" fill="none" stroke="#062841" stroke-width="139" stroke-linecap="round" filter="url(#shadow-blur)" opacity="0.58"/>
-      <path id="light-drift" d="M-180 23C84 -40 241 -1 399 104C539 198 635 258 789 197C938 136 1054 151 1170 235C1295 324 1448 368 1588 311" fill="none" stroke="url(#soft-current)" stroke-width="120" stroke-linecap="round" filter="url(#current-blur)" opacity="1"/>
-    </g>
-    <rect width="1400" height="400" fill="url(#cream-field)"/>
+    <use href="#marine-mesh" width="1400" height="400"/>
   </svg>
-  <rect width="1080" height="1350" fill="#073B5C" filter="url(#paper-grain)" opacity="0.8" aria-hidden="true"/>
+  <rect width="1080" height="1350" fill="#073B5C" filter="url(#fine-grain)" opacity="0.7" aria-hidden="true"/>
   <use href="#brand-logo" x="858" y="80" width="138" height="116" color="#F7F5F0"/>
   <!-- AGENT SLOT: tag (Max 30 chars, one line) -->
-  <text id="slot-tag" data-slot="tag" x="319" y="138" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">ANNOUNCEMENT</text>
+  <text id="slot-tag" data-slot="tag" x="84" y="303" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">ANNOUNCEMENT</text>
   <path d="M82 255H998" stroke="#F7F5F0" stroke-width="1.5" stroke-opacity=".32"/>
   <!-- AGENT SLOT: headline-1 (Max 9 chars, one line) -->
   <text id="slot-headline-1" data-slot="headline-1" x="74" y="469" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="156" font-weight="800" letter-spacing="-4.68" fill="#F7F5F0">YOUR</text>
@@ -113,5 +104,5 @@
   <!-- AGENT SLOT: headline-accent (Max 9 chars, one line) -->
   <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="767" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="156" font-weight="800" letter-spacing="-4.68" font-style="italic" fill="#F7F5F0">HERE.</text>
   <!-- AGENT SLOT: meta-date (Max 25 chars, one line) -->
-  <text id="slot-meta-date" data-slot="meta-date" x="84" y="1195" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#073B5C">DATE OR LABEL</text>
+  <text id="slot-meta-date" data-slot="meta-date" x="84" y="1195" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">DATE OR LABEL</text>
 </svg>

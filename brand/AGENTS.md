@@ -14,7 +14,7 @@ Read [README.md](README.md) and [tokens.json](tokens.json) before editing social
 
 ### 1. WhatsApp Community (Highest Priority Conversion Channel)
 
-Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/whatsapp-banner-2x1.svg) or [showcase](templates/whatsapp-showcase-2x1.svg). Pair it with:
+Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/whatsapp-banner-2x1.svg), [reminder](templates/whatsapp-reminder-2x1.svg) or [showcase](templates/whatsapp-showcase-2x1.svg). For Status use the shared [9:16 layout](templates/ig-story-status-9x16.svg). Pair a chat graphic with:
 
 1. A one-line hook that says what is happening and when.
 2. Two or three short lines describing what participants do and what they need. Use “No coding needed, just bring a laptop” when that is accurate.
@@ -30,7 +30,7 @@ Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/w
 
 ### 2. Instagram (@uopaisociety)
 
-- Use a four- or five-slide 1080 × 1350 carousel from [the Instagram templates](templates/). Use the grainy marine-blue and cream gradient from the supplied templates. Use a real screenshot in the rounded frame on showcase slides.
+- Choose a [portrait event post](templates/ig-post-event-4x5.svg), [square announcement](templates/ig-post-square-1x1.svg), [Story](templates/ig-story-status-9x16.svg) or a 1080 × 1350 carousel from [the Instagram templates](templates/). Use a real screenshot in the rounded frame on showcase slides. Keep essential Story content within the safe insets and add the native link sticker in the app.
 - Keep to one idea and at most 12 words of editable copy per slide, including logistics and CTA. Shorten the headline or CTA when adding room and time.
 - Keep captions under 60 words. Put the hook on line one, follow with two sentences, give the date, time and location, and end with “Sign up via link in bio.”
 
