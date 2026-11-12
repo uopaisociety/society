@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440"
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"
      role="img" aria-labelledby="asset-title asset-description">
   <title id="asset-title">AI Society | Instagram grid template</title>
   <desc id="asset-description">Editable four-item grid for highlights, topics or prompts.</desc>
@@ -43,26 +43,26 @@
       </g>
     </symbol>
   </defs>
-  <svg id="brand-background" width="1080" height="1440" viewBox="0 0 1400 400"
+  <svg id="brand-background" width="1080" height="1350" viewBox="0 0 1400 400"
        preserveAspectRatio="none" aria-hidden="true">
     <rect width="1400" height="400" fill="#F7F5F0"/>
     <rect width="1400" height="400" fill="url(#cream-reflection)"/>
     <rect width="1400" height="400" fill="url(#cream-slate)"/>
   </svg>
-  <rect width="1080" height="1440" fill="#073B5C" filter="url(#fine-grain)" opacity="0.49" aria-hidden="true"/>
+  <rect width="1080" height="1350" fill="#073B5C" filter="url(#fine-grain)" opacity="0.49" aria-hidden="true"/>
   <use href="#brand-logo" x="903" y="87" width="94" height="64" color="#073B5C"/>
   <!-- AGENT SLOT: headline-1 (Max 13 chars, one line) -->
   <text id="slot-headline-1" data-slot="headline-1" x="76" y="304" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="109" font-weight="800" letter-spacing="-3.27" fill="#073B5C">HIGHLIGHTS.</text>
-  <rect x="82" y="403" width="446" height="387" rx="24" fill="#F7F5F0" fill-opacity=".78" stroke="#073B5C" stroke-opacity=".23" stroke-width="1.5"/>
+  <rect x="82" y="403" width="446" height="352" rx="24" fill="#F7F5F0" fill-opacity=".78" stroke="#073B5C" stroke-opacity=".23" stroke-width="1.5"/>
   <!-- AGENT SLOT: grid-1 (Max 16 chars, one line) -->
-  <text id="slot-grid-1" data-slot="grid-1" x="116" y="726" font-family="'Inter', system-ui, sans-serif" font-size="42" font-weight="500" fill="#073B5C">Item one</text>
-  <rect x="552" y="403" width="446" height="387" rx="24" fill="#F7F5F0" fill-opacity=".78" stroke="#073B5C" stroke-opacity=".23" stroke-width="1.5"/>
+  <text id="slot-grid-1" data-slot="grid-1" x="116" y="691" font-family="'Inter', system-ui, sans-serif" font-size="42" font-weight="500" fill="#073B5C">Item one</text>
+  <rect x="552" y="403" width="446" height="352" rx="24" fill="#F7F5F0" fill-opacity=".78" stroke="#073B5C" stroke-opacity=".23" stroke-width="1.5"/>
   <!-- AGENT SLOT: grid-2 (Max 16 chars, one line) -->
-  <text id="slot-grid-2" data-slot="grid-2" x="586" y="726" font-family="'Inter', system-ui, sans-serif" font-size="42" font-weight="500" fill="#073B5C">Item two</text>
-  <rect x="82" y="823" width="446" height="387" rx="24" fill="#F7F5F0" fill-opacity=".78" stroke="#073B5C" stroke-opacity=".23" stroke-width="1.5"/>
+  <text id="slot-grid-2" data-slot="grid-2" x="586" y="691" font-family="'Inter', system-ui, sans-serif" font-size="42" font-weight="500" fill="#073B5C">Item two</text>
+  <rect x="82" y="788" width="446" height="352" rx="24" fill="#F7F5F0" fill-opacity=".78" stroke="#073B5C" stroke-opacity=".23" stroke-width="1.5"/>
   <!-- AGENT SLOT: grid-3 (Max 16 chars, one line) -->
-  <text id="slot-grid-3" data-slot="grid-3" x="116" y="1146" font-family="'Inter', system-ui, sans-serif" font-size="42" font-weight="500" fill="#073B5C">Item three</text>
-  <rect x="552" y="823" width="446" height="387" rx="24" fill="#F7F5F0" fill-opacity=".78" stroke="#073B5C" stroke-opacity=".23" stroke-width="1.5"/>
+  <text id="slot-grid-3" data-slot="grid-3" x="116" y="1076" font-family="'Inter', system-ui, sans-serif" font-size="42" font-weight="500" fill="#073B5C">Item three</text>
+  <rect x="552" y="788" width="446" height="352" rx="24" fill="#F7F5F0" fill-opacity=".78" stroke="#073B5C" stroke-opacity=".23" stroke-width="1.5"/>
   <!-- AGENT SLOT: grid-4 (Max 16 chars, one line) -->
-  <text id="slot-grid-4" data-slot="grid-4" x="586" y="1146" font-family="'Inter', system-ui, sans-serif" font-size="42" font-weight="500" fill="#073B5C">Item four</text>
+  <text id="slot-grid-4" data-slot="grid-4" x="586" y="1076" font-family="'Inter', system-ui, sans-serif" font-size="42" font-weight="500" fill="#073B5C">Item four</text>
 </svg>

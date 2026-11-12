@@ -44,14 +44,17 @@ Pair a chat graphic with short message copy and one tappable link or poll. For r
 
 | Delivery | Template | Size | Treatment |
 | --- | --- | --- | --- |
-| Standalone event or recruitment post | [Portrait event post](templates/ig-post-event-3x4.svg) | 1080 × 1440 | Cream |
+| Standalone event or recruitment post | [Portrait event post](templates/ig-post-event-4x5.svg) | 1080 × 1350 | Cream |
 | Story or vertical reminder | [Story and Status](templates/ig-story-status-9x16.svg) | 1080 × 1920 | Marine |
-| Carousel opening hook | [01 · Hook](templates/ig-carousel-01-hook-3x4.svg) | 1080 × 1440 | Marine |
-| Carousel screenshot or photo | [02 · Showcase](templates/ig-carousel-02-screen-3x4.svg) | 1080 × 1440 | Cream |
-| Carousel agenda, highlights or prompts | [03 · Grid](templates/ig-carousel-03-grid-3x4.svg) | 1080 × 1440 | Cream |
-| Carousel logistics and next step | [04 · CTA](templates/ig-carousel-04-cta-3x4.svg) | 1080 × 1440 | Hybrid |
+| Carousel opening hook | [01 · Hook](templates/ig-carousel-01-hook-4x5.svg) | 1080 × 1350 | Marine |
+| Carousel screenshot or photo | [02 · Showcase](templates/ig-carousel-02-screen-4x5.svg) | 1080 × 1350 | Cream |
+| Carousel agenda, highlights or prompts | [03 · Grid](templates/ig-carousel-03-grid-4x5.svg) | 1080 × 1350 | Cream |
+| Carousel logistics and next step | [04 · CTA](templates/ig-carousel-04-cta-4x5.svg) | 1080 × 1350 | Hybrid |
+| Shared carousel background | [Panoramic background](templates/ig-carousel-background-4x5.svg) | 4320 × 1350 | Marine to cream |
 
-Use 3:4 (1080 × 1440) for standalone feed posts and every slide in a feed carousel. Build a carousel with the hook first, the showcase or grid slides that fit the story, and one closing CTA. Use the portrait event post when a single image can carry the essential details. On Stories, keep text in the central area and add the link sticker in the app. The vertical template leaves 300 px at the top and bottom as working margins. Preview the final placement with the app controls visible.
+Use 4:5 (1080 × 1350) for standalone feed posts and every slide in a feed carousel. Build a carousel with the hook first, the showcase or grid slides that fit the story, and one closing CTA. Use the portrait event post when a single image can carry the essential details. On Stories, keep text in the central area and add the link sticker in the app. The vertical template leaves 300 px at the top and bottom as working margins. Preview the final placement with the app controls visible.
+
+A carousel uses one background, drawn once and split across the slides, so the seams line up when someone swipes. Build it as a single canvas of N × 1080 by 1350, then crop that canvas into N slides of 1080 × 1350. The [panoramic background](templates/ig-carousel-background-4x5.svg) is the four-slide reference: marine-deep and marine-navy on the left, through slate-blue, to cream on the right, with one grain field across the width. Grain type, frequency, octaves, seed and the marine, hybrid and cream opacities come from [tokens.json](tokens.json). For another slide count, set the full canvas width to N × 1080 and keep the height at 1350. Keep text and logos inside each slide's safe insets, 80 px from the sides and 72 px from the top and bottom, and clear of the seams. Use cream lettering on the marine end and navy lettering on the cream end, and keep small text off the transition. The slide templates still embed a background so a single frame can be previewed. Before publishing, use the matching slice of the panorama. Export slide k, starting at 0, by offsetting the viewBox by k × 1080.
 
 ## Other formats
 
@@ -88,5 +91,28 @@ mkdir -p out
 npx playwright screenshot --viewport-size="1600,800" --wait-for-timeout=1500 \
   "file://$(pwd)/brand/templates/whatsapp-banner-2x1.svg" out/wa-banner.png
 ```
+
+To export slide k from the panoramic carousel background, offset the viewBox by k × 1080 and render that window at 1080 × 1350. Change only the root width and viewBox. Leave the background rects and the grain filter at the full panorama width so the gradient stays one field.
+
+```bash
+k=0
+python3 - "$k" <<'PY'
+import pathlib, sys
+k = int(sys.argv[1])
+src = pathlib.Path("brand/templates/ig-carousel-background-4x5.svg")
+text = src.read_text()
+text = text.replace('width="4320"', 'width="1080"', 1)
+text = text.replace('viewBox="0 0 4320 1350"', f'viewBox="{k * 1080} 0 1080 1350"', 1)
+out = pathlib.Path("out")
+out.mkdir(exist_ok=True)
+slide = out / f"ig-carousel-bg-{k}.svg"
+slide.write_text(text)
+print(slide)
+PY
+npx --yes @resvg/resvg-js-cli@2.6.2-beta.1 --fit-width 1080 \
+  out/ig-carousel-bg-$k.svg out/ig-carousel-bg-$k.png
+```
+
+The cropped file is a normal 1080 × 1350 SVG. The Playwright command above can screenshot it with `--viewport-size="1080,1350"`.
 
 For automated Chromium exports that require exact typography, await `document.fonts.ready` and verify that the intended fonts loaded before capturing. Use local installs when exporting offline. See [AGENTS.md](AGENTS.md) for platform copy and publishing rules.

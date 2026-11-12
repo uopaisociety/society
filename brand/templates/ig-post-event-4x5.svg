@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440"
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"
      role="img" aria-labelledby="asset-title asset-description">
   <title id="asset-title">AI Society | Instagram event post template</title>
   <desc id="asset-description">Standalone event post with title, date, time, venue and one call to action.</desc>
@@ -52,30 +52,30 @@
       </g>
     </symbol>
   </defs>
-  <svg id="brand-background" width="1080" height="1440" viewBox="0 0 1400 400"
+  <svg id="brand-background" width="1080" height="1350" viewBox="0 0 1400 400"
        preserveAspectRatio="none" aria-hidden="true">
     <rect width="1400" height="400" fill="#F7F5F0"/>
     <rect width="1400" height="400" fill="url(#cream-reflection)"/>
     <rect width="1400" height="400" fill="url(#cream-slate)"/>
   </svg>
-  <rect width="1080" height="1440" fill="#073B5C" filter="url(#fine-grain)" opacity="0.49" aria-hidden="true"/>
+  <rect width="1080" height="1350" fill="#073B5C" filter="url(#fine-grain)" opacity="0.49" aria-hidden="true"/>
   <use href="#brand-logo" x="862" y="84" width="136" height="114" color="#073B5C"/>
   <!-- AGENT SLOT: tag (Max 30 chars, one line) -->
   <text id="slot-tag" data-slot="tag" x="84" y="141" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">EVENT TYPE</text>
   <path d="M84 250H996" stroke="#073B5C" stroke-width="1.5" stroke-opacity=".32"/>
   <!-- AGENT SLOT: headline-1 (Max 9 chars, one line) -->
-  <text id="slot-headline-1" data-slot="headline-1" x="74" y="529" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="147" font-weight="800" letter-spacing="-4.41" fill="#073B5C">EVENT</text>
+  <text id="slot-headline-1" data-slot="headline-1" x="74" y="500" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="147" font-weight="800" letter-spacing="-4.41" fill="#073B5C">EVENT</text>
   <!-- AGENT SLOT: headline-accent (Max 9 chars, one line) -->
-  <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="690" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="147" font-weight="800" letter-spacing="-4.41" font-style="italic" fill="#073B5C">NAME.</text>
+  <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="661" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="147" font-weight="800" letter-spacing="-4.41" font-style="italic" fill="#073B5C">NAME.</text>
   <!-- AGENT SLOT: subhead (Max 42 chars, one line) -->
-  <text id="slot-subhead" data-slot="subhead" x="84" y="800" font-family="'Inter', system-ui, sans-serif" font-size="39" font-weight="500" fill="#073B5C">One line about what’s happening.</text>
-  <path d="M84 960H996" stroke="#073B5C" stroke-width="1.5" stroke-opacity=".32"/>
+  <text id="slot-subhead" data-slot="subhead" x="84" y="771" font-family="'Inter', system-ui, sans-serif" font-size="39" font-weight="500" fill="#073B5C">One line about what’s happening.</text>
+  <path d="M84 910H996" stroke="#073B5C" stroke-width="1.5" stroke-opacity=".32"/>
   <!-- AGENT SLOT: meta-date (Max 17 chars, one line) -->
-  <text id="slot-meta-date" data-slot="meta-date" x="84" y="1061" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#073B5C">DATE</text>
+  <text id="slot-meta-date" data-slot="meta-date" x="84" y="998" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#073B5C">DATE</text>
   <!-- AGENT SLOT: meta-time (Max 8 chars, one line. UK time) -->
-  <text id="slot-meta-time" data-slot="meta-time" x="409" y="1061" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#073B5C">TIME</text>
+  <text id="slot-meta-time" data-slot="meta-time" x="409" y="998" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#073B5C">TIME</text>
   <!-- AGENT SLOT: meta-location (Max 22 chars, one line) -->
-  <text id="slot-meta-location" data-slot="meta-location" x="633" y="1061" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">LOCATION</text>
+  <text id="slot-meta-location" data-slot="meta-location" x="633" y="998" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">LOCATION</text>
   <!-- AGENT SLOT: cta-text (Max 26 chars, one line) -->
-  <text id="slot-cta-text" data-slot="cta-text" x="84" y="1263" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="500" letter-spacing="0.55" fill="#073B5C">CALL TO ACTION</text>
+  <text id="slot-cta-text" data-slot="cta-text" x="84" y="1173" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="500" letter-spacing="0.55" fill="#073B5C">CALL TO ACTION</text>
 </svg>

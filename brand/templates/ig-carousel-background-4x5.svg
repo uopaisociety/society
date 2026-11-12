@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="4320" height="1350" viewBox="0 0 4320 1350"
+     role="img" aria-labelledby="asset-title asset-description">
+  <title id="asset-title">AI Society | Instagram carousel background</title>
+  <desc id="asset-description">One marine-to-cream gradient with grain, four slides wide. Crop slide k by offsetting the viewBox by k times 1080.</desc>
+  <!-- Panorama for N = 4. The canvas is N x 1080 by 1350.
+       Export slide k (k starts at 0) by setting the root viewBox to
+       "k*1080 0 1080 1350" and the root width to 1080. Leave the rects and
+       the grain filter at the full width so neighbouring slides meet.
+       For another N, set that full width to N x 1080. -->
+  <defs>
+    <!-- Colour fields and grain from the AI Society gradient proof. -->
+    <linearGradient id="panorama-base" gradientUnits="userSpaceOnUse" x1="0" y1="180" x2="4320" y2="1160">
+      <stop offset="0" stop-color="#06283F"/>
+      <stop offset="0.22" stop-color="#073B5C"/>
+      <stop offset="0.58" stop-color="#668998"/>
+      <stop offset="1" stop-color="#F7F5F0"/>
+    </linearGradient>
+    <radialGradient id="deep-shadow" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(280 1180) rotate(-8) scale(1500 720)">
+      <stop offset="0" stop-color="#06283F" stop-opacity=".72"/>
+      <stop offset=".55" stop-color="#06283F" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#06283F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="marine-key-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(520 40) rotate(11) scale(1680 760)">
+      <stop offset="0" stop-color="#F7F5F0" stop-opacity=".44"/>
+      <stop offset=".28" stop-color="#F7F5F0" stop-opacity=".26"/>
+      <stop offset=".62" stop-color="#668998" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#668998" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="slate-bloom" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(2280 980) rotate(-6) scale(1700 680)">
+      <stop offset="0" stop-color="#668998" stop-opacity=".62"/>
+      <stop offset=".45" stop-color="#668998" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#668998" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cream-bloom" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(3920 360) rotate(8) scale(1500 900)">
+      <stop offset="0" stop-color="#F7F5F0" stop-opacity=".96"/>
+      <stop offset=".42" stop-color="#F7F5F0" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#F7F5F0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fine-grain" filterUnits="userSpaceOnUse" x="0" y="0" width="4320" height="1350" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" seed="23" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="shadow-grain" values="0 0 0 0 .0667  0 0 0 0 .0941  0 0 0 0 .1255  .34 0 0 0 -.142"/>
+      <feColorMatrix in="noise" type="matrix" result="light-grain" values="0 0 0 0 .9686  0 0 0 0 .9608  0 0 0 0 .9412  -.32 0 0 0 .175"/>
+      <feComposite in="light-grain" in2="shadow-grain" operator="over"/>
+    </filter>
+    <linearGradient id="grain-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="4320" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".7"/>
+      <stop offset=".5" stop-color="#ffffff" stop-opacity=".54"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".49"/>
+    </linearGradient>
+    <mask id="grain-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="4320" height="1350">
+      <rect width="4320" height="1350" fill="url(#grain-fade)"/>
+    </mask>
+  </defs>
+  <rect id="panorama-field" width="4320" height="1350" fill="url(#panorama-base)"/>
+  <rect width="4320" height="1350" fill="url(#deep-shadow)"/>
+  <rect width="4320" height="1350" fill="url(#marine-key-light)"/>
+  <rect width="4320" height="1350" fill="url(#slate-bloom)"/>
+  <rect width="4320" height="1350" fill="url(#cream-bloom)"/>
+  <rect id="panorama-grain" width="4320" height="1350" fill="#073B5C" filter="url(#fine-grain)" mask="url(#grain-mask)"/>
+  <!-- Hidden slice guides at each 1080 boundary. Not part of the export. -->
+  <g id="slice-guides" display="none" aria-hidden="true">
+    <path d="M1080 0V1350 M2160 0V1350 M3240 0V1350" fill="none" stroke="#F7F5F0" stroke-width="1"/>
+  </g>
+</svg>

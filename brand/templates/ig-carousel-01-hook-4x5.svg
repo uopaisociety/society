@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440"
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"
      role="img" aria-labelledby="asset-title asset-description">
   <title id="asset-title">AI Society | Instagram opening slide template</title>
   <desc id="asset-description">Editable portrait opening slide with an optional footer.</desc>
@@ -88,11 +88,11 @@
       </g>
     </symbol>
   </defs>
-  <svg id="brand-background" width="1080" height="1440" viewBox="0 0 1400 400"
+  <svg id="brand-background" width="1080" height="1350" viewBox="0 0 1400 400"
        preserveAspectRatio="none" aria-hidden="true">
     <use href="#marine-mesh" width="1400" height="400"/>
   </svg>
-  <rect width="1080" height="1440" fill="#073B5C" filter="url(#fine-grain)" opacity="0.7" aria-hidden="true"/>
+  <rect width="1080" height="1350" fill="#073B5C" filter="url(#fine-grain)" opacity="0.7" aria-hidden="true"/>
   <use href="#brand-logo" x="858" y="80" width="138" height="116" color="#F7F5F0"/>
   <!-- AGENT SLOT: tag (Max 30 chars, one line) -->
   <text id="slot-tag" data-slot="tag" x="84" y="324" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">ANNOUNCEMENT</text>
@@ -104,5 +104,5 @@
   <!-- AGENT SLOT: headline-accent (Max 9 chars, one line) -->
   <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="823" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="156" font-weight="800" letter-spacing="-4.68" font-style="italic" fill="#F7F5F0">HERE.</text>
   <!-- AGENT SLOT: meta-date (Max 25 chars, one line) -->
-  <text id="slot-meta-date" data-slot="meta-date" x="84" y="1285" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">DATE OR LABEL</text>
+  <text id="slot-meta-date" data-slot="meta-date" x="84" y="1195" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">DATE OR LABEL</text>
 </svg>
