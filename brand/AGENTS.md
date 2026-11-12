@@ -30,7 +30,7 @@ Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/w
 
 ### 2. Instagram (@uopaisociety)
 
-- Choose a [portrait event post](templates/ig-post-event-4x5.svg), [square announcement](templates/ig-post-square-1x1.svg), [Story](templates/ig-story-status-9x16.svg) or a 1080 × 1350 carousel from [the Instagram templates](templates/). Use a real screenshot in the rounded frame on showcase slides. Keep essential Story content within the safe insets and add the native link sticker in the app.
+- Use 3:4 (1080 × 1440) for [portrait event posts](templates/ig-post-event-3x4.svg) and every slide in a [feed carousel](templates/). Use the [9:16 Story](templates/ig-story-status-9x16.svg) for vertical updates. Use a real screenshot in the rounded frame on showcase slides. Keep essential Story content within the safe insets and add the native link sticker in the app.
 - Keep to one idea and at most 12 words of editable copy per slide, including logistics and CTA. Shorten the headline or CTA when adding room and time.
 - Keep captions under 60 words. Put the hook on line one, follow with two sentences, give the date, time and location, and end with “Sign up via link in bio.”
 

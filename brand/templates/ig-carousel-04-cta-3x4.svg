@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440"
      role="img" aria-labelledby="asset-title asset-description">
   <title id="asset-title">AI Society | Instagram closing slide template</title>
   <desc id="asset-description">Editable closing slide with a call to action and optional event details.</desc>
@@ -113,7 +113,7 @@
       </g>
     </symbol>
   </defs>
-  <svg id="brand-background" width="1080" height="1350" viewBox="0 0 400 1400"
+  <svg id="brand-background" width="1080" height="1440" viewBox="0 0 400 1400"
        preserveAspectRatio="none" aria-hidden="true">
     <g transform="translate(400 0) rotate(90)">
       <use href="#marine-mesh" width="1400" height="400"/>
@@ -121,22 +121,22 @@
       <use href="#hybrid-cream-shape" fill="url(#hybrid-cream-shade)" filter="url(#hybrid-cream-feather)"/>
     </g>
   </svg>
-  <rect width="1080" height="1350" fill="#073B5C" filter="url(#fine-grain)" opacity="0.54" aria-hidden="true"/>
+  <rect width="1080" height="1440" fill="#073B5C" filter="url(#fine-grain)" opacity="0.54" aria-hidden="true"/>
   <use href="#brand-logo" x="81" y="87" width="373" height="103" color="#F7F5F0"/>
   <path d="M82 266H998" stroke="#F7F5F0" stroke-width="1.5" stroke-opacity=".32"/>
   <!-- AGENT SLOT: headline-1 (Max 10 chars, one line) -->
-  <text id="slot-headline-1" data-slot="headline-1" x="75" y="500" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="128" font-weight="800" letter-spacing="-3.84" fill="#F7F5F0">YOUR NEXT</text>
+  <text id="slot-headline-1" data-slot="headline-1" x="75" y="536" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="128" font-weight="800" letter-spacing="-3.84" fill="#F7F5F0">YOUR NEXT</text>
   <!-- AGENT SLOT: headline-accent (Max 9 chars, one line) -->
-  <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="649" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="147" font-weight="800" letter-spacing="-4.41" font-style="italic" fill="#F7F5F0">STEP.</text>
+  <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="698" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="147" font-weight="800" letter-spacing="-4.41" font-style="italic" fill="#F7F5F0">STEP.</text>
   <!-- AGENT SLOT: meta-date (Max 18 chars, one line) -->
-  <text id="slot-meta-date" data-slot="meta-date" x="82" y="1090" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">DATE</text>
+  <text id="slot-meta-date" data-slot="meta-date" x="82" y="1178" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">DATE</text>
   <!-- AGENT SLOT: meta-time (Max 7 chars, one line. Optional UK time) -->
-  <text id="slot-meta-time" data-slot="meta-time" x="435" y="1090" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">TIME</text>
+  <text id="slot-meta-time" data-slot="meta-time" x="435" y="1178" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">TIME</text>
   <!-- AGENT SLOT: meta-location (Max 22 chars, one line. Optional) -->
-  <text id="slot-meta-location" data-slot="meta-location" x="632" y="1090" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">LOCATION</text>
-  <path d="M82 1138H998" stroke="#073B5C" stroke-width="1.5" stroke-opacity=".32"/>
+  <text id="slot-meta-location" data-slot="meta-location" x="632" y="1178" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">LOCATION</text>
+  <path d="M82 1226H998" stroke="#073B5C" stroke-width="1.5" stroke-opacity=".32"/>
   <!-- AGENT SLOT: cta-text (Max 22 chars, one line) -->
-  <text id="slot-cta-text" data-slot="cta-text" x="82" y="1210" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="500" letter-spacing="0.55" fill="#073B5C">CALL TO ACTION</text>
+  <text id="slot-cta-text" data-slot="cta-text" x="82" y="1298" font-family="'JetBrains Mono', monospace" font-size="24" font-weight="500" letter-spacing="0.55" fill="#073B5C">CALL TO ACTION</text>
   <!-- AGENT SLOT: cta-url (Max 34 chars, one line. Optional link label) -->
-  <text id="slot-cta-url" data-slot="cta-url" x="500" y="1210" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="500" letter-spacing="0.55" fill="#073B5C"></text>
+  <text id="slot-cta-url" data-slot="cta-url" x="500" y="1298" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="500" letter-spacing="0.55" fill="#073B5C"></text>
 </svg>

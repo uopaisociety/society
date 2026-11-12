@@ -35,7 +35,7 @@ The SVGs use the original wave-mark and lettering outlines. Give the logo breath
 | Announce a workshop, collaboration or sign-up | [Announcement](templates/whatsapp-banner-2x1.svg) | 1600 × 800 | Hybrid |
 | Send a day-of reminder or room change | [Reminder](templates/whatsapp-reminder-2x1.svg) | 1600 × 800 | Marine |
 | Share a demo, member project or event recap | [Showcase](templates/whatsapp-showcase-2x1.svg) | 1600 × 800 | Cream |
-| Cross-post a compact graphic | [Square announcement](templates/ig-post-square-1x1.svg) | 1080 × 1080 | Marine |
+| Cross-post a compact graphic | [Square announcement](templates/social-square-1x1.svg) | 1080 × 1080 | Marine |
 | Post to Status | [Story and Status](templates/ig-story-status-9x16.svg) | 1080 × 1920 | Marine |
 
 Pair a chat graphic with short message copy and one tappable link or poll. For reminders, put the time and room in the message too.
@@ -44,15 +44,14 @@ Pair a chat graphic with short message copy and one tappable link or poll. For r
 
 | Delivery | Template | Size | Treatment |
 | --- | --- | --- | --- |
-| Standalone event or recruitment post | [Portrait event post](templates/ig-post-event-4x5.svg) | 1080 × 1350 | Cream |
-| Short announcement or cross-post | [Square announcement](templates/ig-post-square-1x1.svg) | 1080 × 1080 | Marine |
+| Standalone event or recruitment post | [Portrait event post](templates/ig-post-event-3x4.svg) | 1080 × 1440 | Cream |
 | Story or vertical reminder | [Story and Status](templates/ig-story-status-9x16.svg) | 1080 × 1920 | Marine |
-| Carousel opening hook | [01 · Hook](templates/ig-carousel-01-hook-4x5.svg) | 1080 × 1350 | Marine |
-| Carousel screenshot or photo | [02 · Showcase](templates/ig-carousel-02-screen-4x5.svg) | 1080 × 1350 | Cream |
-| Carousel agenda, highlights or prompts | [03 · Grid](templates/ig-carousel-03-grid-4x5.svg) | 1080 × 1350 | Cream |
-| Carousel logistics and next step | [04 · CTA](templates/ig-carousel-04-cta-4x5.svg) | 1080 × 1350 | Hybrid |
+| Carousel opening hook | [01 · Hook](templates/ig-carousel-01-hook-3x4.svg) | 1080 × 1440 | Marine |
+| Carousel screenshot or photo | [02 · Showcase](templates/ig-carousel-02-screen-3x4.svg) | 1080 × 1440 | Cream |
+| Carousel agenda, highlights or prompts | [03 · Grid](templates/ig-carousel-03-grid-3x4.svg) | 1080 × 1440 | Cream |
+| Carousel logistics and next step | [04 · CTA](templates/ig-carousel-04-cta-3x4.svg) | 1080 × 1440 | Hybrid |
 
-Build a carousel with the hook first, the showcase or grid slides that fit the story, and one closing CTA. Use the portrait event post when a single image can carry the essential details. On Stories, keep text in the central area and add the link sticker in the app. The vertical template leaves 300 px at the top and bottom as working margins. Preview the final placement with the app controls visible.
+Use 3:4 (1080 × 1440) for standalone feed posts and every slide in a feed carousel. Build a carousel with the hook first, the showcase or grid slides that fit the story, and one closing CTA. Use the portrait event post when a single image can carry the essential details. On Stories, keep text in the central area and add the link sticker in the app. The vertical template leaves 300 px at the top and bottom as working margins. Preview the final placement with the app controls visible.
 
 ## Other formats
 

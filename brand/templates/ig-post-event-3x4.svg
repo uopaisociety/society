@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440"
      role="img" aria-labelledby="asset-title asset-description">
-  <title id="asset-title">AI Society | Instagram opening slide template</title>
-  <desc id="asset-description">Editable portrait opening slide with an optional footer.</desc>
+  <title id="asset-title">AI Society | Instagram event post template</title>
+  <desc id="asset-description">Standalone event post with title, date, time, venue and one call to action.</desc>
   <defs>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;0,800;1,700;1,800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap");
@@ -17,52 +17,16 @@
       }
     </style>
     <!-- Colour fields and grain from the AI Society gradient proof. -->
-    <linearGradient id="marine-base" gradientUnits="userSpaceOnUse" x1="70" y1="340" x2="1340" y2="30">
-      <stop offset="0" stop-color="#09334E" stop-opacity="1"/>
-      <stop offset="0.52" stop-color="#073B5C" stop-opacity="1"/>
-      <stop offset="1" stop-color="#0B3D5B" stop-opacity="1"/>
-    </linearGradient>
-    <radialGradient id="lower-navy" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(383 381) rotate(-11) scale(614 249)">
-      <stop offset="0" stop-color="#06283F" stop-opacity="0.72"/>
-      <stop offset="0.5" stop-color="#06283F" stop-opacity="0.42479999999999996"/>
-      <stop offset="1" stop-color="#06283F" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="upper-navy" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1071 -53) rotate(-12) scale(593 249)">
-      <stop offset="0" stop-color="#062B44" stop-opacity="0.84"/>
-      <stop offset="0.5" stop-color="#062B44" stop-opacity="0.49559999999999993"/>
-      <stop offset="1" stop-color="#062B44" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="marine-key-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(306 -63) rotate(11) scale(892 284)">
-      <stop offset="0" stop-color="#F7F5F0" stop-opacity=".44"/>
-      <stop offset=".2" stop-color="#F7F5F0" stop-opacity=".41"/>
-      <stop offset=".44" stop-color="#F7F5F0" stop-opacity=".29"/>
-      <stop offset=".68" stop-color="#D5E1E0" stop-opacity=".13"/>
-      <stop offset=".88" stop-color="#9CB4BD" stop-opacity=".035"/>
-      <stop offset="1" stop-color="#9CB4BD" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="marine-edge-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1478 365) rotate(-16) scale(645 255)">
-      <stop offset="0" stop-color="#F7F5F0" stop-opacity=".35"/>
-      <stop offset=".22" stop-color="#F7F5F0" stop-opacity=".32"/>
-      <stop offset=".46" stop-color="#D5E1E0" stop-opacity=".22"/>
-      <stop offset=".72" stop-color="#AEC4CB" stop-opacity=".09"/>
-      <stop offset="1" stop-color="#AEC4CB" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="marine-reflection" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(664 187) rotate(12) scale(567 217)">
-      <stop offset="0" stop-color="#668998" stop-opacity=".28"/>
-      <stop offset=".39" stop-color="#668998" stop-opacity=".21"/>
-      <stop offset=".72" stop-color="#668998" stop-opacity=".07"/>
+    <radialGradient id="cream-slate" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1300 422) rotate(-18) scale(840 255)">
+      <stop offset="0" stop-color="#668998" stop-opacity=".53"/>
+      <stop offset=".44" stop-color="#668998" stop-opacity=".28"/>
+      <stop offset=".75" stop-color="#668998" stop-opacity=".09"/>
       <stop offset="1" stop-color="#668998" stop-opacity="0"/>
     </radialGradient>
-    <symbol id="marine-mesh" viewBox="0 0 1400 400" preserveAspectRatio="none">
-      <g id="mesh-field">
-        <rect width="1400" height="400" fill="url(#marine-base)"/>
-        <rect width="1400" height="400" fill="url(#lower-navy)"/>
-        <rect width="1400" height="400" fill="url(#upper-navy)"/>
-      </g>
-      <rect width="1400" height="400" fill="url(#marine-reflection)"/>
-      <rect width="1400" height="400" fill="url(#marine-key-light)"/>
-      <rect width="1400" height="400" fill="url(#marine-edge-light)"/>
-    </symbol>
+    <radialGradient id="cream-reflection" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(49 -20) rotate(9) scale(600 155)">
+      <stop offset="0" stop-color="#668998" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#668998" stop-opacity="0"/>
+    </radialGradient>
     <filter id="fine-grain" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" seed="23" stitchTiles="stitch" result="noise"/>
       <feColorMatrix in="noise" type="matrix" result="shadow-grain" values="0 0 0 0 .0667  0 0 0 0 .0941  0 0 0 0 .1255  .34 0 0 0 -.142"/>
@@ -88,21 +52,30 @@
       </g>
     </symbol>
   </defs>
-  <svg id="brand-background" width="1080" height="1350" viewBox="0 0 1400 400"
+  <svg id="brand-background" width="1080" height="1440" viewBox="0 0 1400 400"
        preserveAspectRatio="none" aria-hidden="true">
-    <use href="#marine-mesh" width="1400" height="400"/>
+    <rect width="1400" height="400" fill="#F7F5F0"/>
+    <rect width="1400" height="400" fill="url(#cream-reflection)"/>
+    <rect width="1400" height="400" fill="url(#cream-slate)"/>
   </svg>
-  <rect width="1080" height="1350" fill="#073B5C" filter="url(#fine-grain)" opacity="0.7" aria-hidden="true"/>
-  <use href="#brand-logo" x="858" y="80" width="138" height="116" color="#F7F5F0"/>
+  <rect width="1080" height="1440" fill="#073B5C" filter="url(#fine-grain)" opacity="0.49" aria-hidden="true"/>
+  <use href="#brand-logo" x="862" y="84" width="136" height="114" color="#073B5C"/>
   <!-- AGENT SLOT: tag (Max 30 chars, one line) -->
-  <text id="slot-tag" data-slot="tag" x="84" y="303" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">ANNOUNCEMENT</text>
-  <path d="M82 255H998" stroke="#F7F5F0" stroke-width="1.5" stroke-opacity=".32"/>
+  <text id="slot-tag" data-slot="tag" x="84" y="141" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">EVENT TYPE</text>
+  <path d="M84 250H996" stroke="#073B5C" stroke-width="1.5" stroke-opacity=".32"/>
   <!-- AGENT SLOT: headline-1 (Max 9 chars, one line) -->
-  <text id="slot-headline-1" data-slot="headline-1" x="74" y="469" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="156" font-weight="800" letter-spacing="-4.68" fill="#F7F5F0">YOUR</text>
-  <!-- AGENT SLOT: headline-2 (Max 10 chars, one line. Optional) -->
-  <text id="slot-headline-2" data-slot="headline-2" x="77" y="618" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="140" font-weight="800" letter-spacing="-4.2" fill="#F7F5F0">HEADLINE</text>
+  <text id="slot-headline-1" data-slot="headline-1" x="74" y="529" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="147" font-weight="800" letter-spacing="-4.41" fill="#073B5C">EVENT</text>
   <!-- AGENT SLOT: headline-accent (Max 9 chars, one line) -->
-  <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="767" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="156" font-weight="800" letter-spacing="-4.68" font-style="italic" fill="#F7F5F0">HERE.</text>
-  <!-- AGENT SLOT: meta-date (Max 25 chars, one line) -->
-  <text id="slot-meta-date" data-slot="meta-date" x="84" y="1195" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">DATE OR LABEL</text>
+  <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="690" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="147" font-weight="800" letter-spacing="-4.41" font-style="italic" fill="#073B5C">NAME.</text>
+  <!-- AGENT SLOT: subhead (Max 42 chars, one line) -->
+  <text id="slot-subhead" data-slot="subhead" x="84" y="800" font-family="'Inter', system-ui, sans-serif" font-size="39" font-weight="500" fill="#073B5C">One line about what’s happening.</text>
+  <path d="M84 960H996" stroke="#073B5C" stroke-width="1.5" stroke-opacity=".32"/>
+  <!-- AGENT SLOT: meta-date (Max 17 chars, one line) -->
+  <text id="slot-meta-date" data-slot="meta-date" x="84" y="1061" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#073B5C">DATE</text>
+  <!-- AGENT SLOT: meta-time (Max 8 chars, one line. UK time) -->
+  <text id="slot-meta-time" data-slot="meta-time" x="409" y="1061" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#073B5C">TIME</text>
+  <!-- AGENT SLOT: meta-location (Max 22 chars, one line) -->
+  <text id="slot-meta-location" data-slot="meta-location" x="633" y="1061" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#073B5C">LOCATION</text>
+  <!-- AGENT SLOT: cta-text (Max 26 chars, one line) -->
+  <text id="slot-cta-text" data-slot="cta-text" x="84" y="1263" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="500" letter-spacing="0.55" fill="#073B5C">CALL TO ACTION</text>
 </svg>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080"
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1440" viewBox="0 0 1080 1440"
      role="img" aria-labelledby="asset-title asset-description">
-  <title id="asset-title">AI Society | Square announcement template</title>
-  <desc id="asset-description">Standalone square announcement for Instagram or WhatsApp.</desc>
+  <title id="asset-title">AI Society | Instagram opening slide template</title>
+  <desc id="asset-description">Editable portrait opening slide with an optional footer.</desc>
   <defs>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;0,800;1,700;1,800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap");
@@ -88,21 +88,21 @@
       </g>
     </symbol>
   </defs>
-  <svg id="brand-background" width="1080" height="1080" viewBox="0 0 1400 400"
+  <svg id="brand-background" width="1080" height="1440" viewBox="0 0 1400 400"
        preserveAspectRatio="none" aria-hidden="true">
     <use href="#marine-mesh" width="1400" height="400"/>
   </svg>
-  <rect width="1080" height="1080" fill="#073B5C" filter="url(#fine-grain)" opacity="0.7" aria-hidden="true"/>
-  <use href="#brand-logo" x="856" y="84" width="141" height="119" color="#F7F5F0"/>
-  <!-- AGENT SLOT: tag (Max 28 chars, one line) -->
-  <text id="slot-tag" data-slot="tag" x="84" y="281" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">ANNOUNCEMENT</text>
+  <rect width="1080" height="1440" fill="#073B5C" filter="url(#fine-grain)" opacity="0.7" aria-hidden="true"/>
+  <use href="#brand-logo" x="858" y="80" width="138" height="116" color="#F7F5F0"/>
+  <!-- AGENT SLOT: tag (Max 30 chars, one line) -->
+  <text id="slot-tag" data-slot="tag" x="84" y="324" font-family="'JetBrains Mono', monospace" font-size="25" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">ANNOUNCEMENT</text>
+  <path d="M82 266H998" stroke="#F7F5F0" stroke-width="1.5" stroke-opacity=".32"/>
   <!-- AGENT SLOT: headline-1 (Max 9 chars, one line) -->
-  <text id="slot-headline-1" data-slot="headline-1" x="74" y="443" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="143" font-weight="800" letter-spacing="-4.29" fill="#F7F5F0">YOUR</text>
-  <!-- AGENT SLOT: headline-accent (Max 10 chars, one line) -->
-  <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="591" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="143" font-weight="800" letter-spacing="-4.29" font-style="italic" fill="#F7F5F0">HEADLINE.</text>
-  <!-- AGENT SLOT: subhead (Max 40 chars, one line) -->
-  <text id="slot-subhead" data-slot="subhead" x="84" y="701" font-family="'Inter', system-ui, sans-serif" font-size="38" font-weight="500" fill="#F7F5F0">Add one sentence of context.</text>
-  <path d="M84 812H996" stroke="#F7F5F0" stroke-width="1.5" stroke-opacity=".32"/>
-  <!-- AGENT SLOT: cta-text (Max 27 chars, one line) -->
-  <text id="slot-cta-text" data-slot="cta-text" x="84" y="894" font-family="'JetBrains Mono', monospace" font-size="27" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">CALL TO ACTION</text>
+  <text id="slot-headline-1" data-slot="headline-1" x="74" y="506" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="156" font-weight="800" letter-spacing="-4.68" fill="#F7F5F0">YOUR</text>
+  <!-- AGENT SLOT: headline-2 (Max 10 chars, one line. Optional) -->
+  <text id="slot-headline-2" data-slot="headline-2" x="77" y="665" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="140" font-weight="800" letter-spacing="-4.2" fill="#F7F5F0">HEADLINE</text>
+  <!-- AGENT SLOT: headline-accent (Max 9 chars, one line) -->
+  <text id="slot-headline-accent" data-slot="headline-accent" x="77" y="823" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="156" font-weight="800" letter-spacing="-4.68" font-style="italic" fill="#F7F5F0">HERE.</text>
+  <!-- AGENT SLOT: meta-date (Max 25 chars, one line) -->
+  <text id="slot-meta-date" data-slot="meta-date" x="84" y="1285" font-family="'JetBrains Mono', monospace" font-size="26" font-weight="500" letter-spacing="0.55" fill="#F7F5F0">DATE OR LABEL</text>
 </svg>
