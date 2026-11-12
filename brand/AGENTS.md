@@ -8,7 +8,7 @@ Read [README.md](README.md) and [tokens.json](tokens.json) before editing social
 - Never use “delve”, “unleash”, “revolutionize”, “game-changer”, “thrilled to announce”, “cutting-edge”, “embark”, “realm”, “tapestry”, “supercharge”, “calling all students”, “don't miss out” or “buckle up”.
 - Never use em dashes for dramatic pauses. Use periods, commas or line breaks.
 - Use at most two functional emojis in a message. The allowed set is 🎮, 👇, 👉, 📍, ⏰ and ⚡.
-- Lead with what members build, touch or take home. For example, “You get a plain Flappy Bird and 30 minutes. Prompt a boss fight or webcam controls, then we play every game live on the projector.”
+- Lead with what members build, touch or take home. For example, “Bring a laptop. We’ll build a simple chatbot and try each other’s demos.”
 
 ## B. Platform-Specific Rules
 
@@ -30,7 +30,7 @@ Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/w
 
 ### 2. Instagram (@uopaisociety)
 
-- Use a four- or five-slide 1080 × 1350 carousel from [the Instagram templates](templates/). Alternate atmospheric navy with cool chalk showcase slides containing a real screenshot inside the rounded navy frame.
+- Use a four- or five-slide 1080 × 1350 carousel from [the Instagram templates](templates/). Use the grainy marine-blue and cream gradient from the supplied templates. Use a real screenshot in the rounded frame on showcase slides.
 - Keep to one idea and at most 12 words of editable copy per slide, including logistics and CTA. Shorten the headline or CTA when adding room and time.
 - Keep captions under 60 words. Put the hook on line one, follow with two sentences, give the date, time and location, and end with “Sign up via link in bio.”
 
@@ -40,11 +40,11 @@ Use the 2400 × 1256 [Open Graph card](templates/social-og-card.svg) or 1600 × 
 
 ### 4. Luma & GitHub Repositories
 
-Luma is canonical for event dates, times, rooms and registration questions. GitHub is canonical for starter code and the live GitHub Pages demo. Before generating social copy or artwork, check that every template agrees on the date, 24-hour UK time, room code and destination URLs. Leave optional template logistics blank until confirmed.
+Luma is canonical for event dates, times, rooms and registration questions. GitHub is canonical for starter code and the live GitHub Pages demo. Before generating social copy or artwork, check that every template agrees on the date, 24-hour UK time, room code and destination URLs. Clear optional placeholder copy when a detail does not apply. Use confirmed logistics and live destinations in published artwork.
 
 ## C. Programmatic SVG-to-PNG Workflow for Agents
 
-Work on a copy. Edit text by `id="slot-…"` or `data-slot` using an XML-aware parser. Keep the text editable, the slot IDs unique and the surrounding transforms and styles intact. Respect the per-slot character limit and check for overflow in the rendered PNG. Update the root title and description. For `slot-screenshot`, replace the image `href` with an embedded PNG or JPEG data URI (up to 1 MB decoded), update the accessible label and retain the rounded `frame-clip` and border.
+Work on a copy. Edit text by `id="slot-…"` or `data-slot` using an XML-aware parser. Keep the text editable, the slot IDs unique and the surrounding transforms and styles intact. Respect the per-slot character limit and check for overflow in the rendered PNG. Update the root title and description. For `slot-screenshot`, set the image `href` to an embedded PNG or JPEG data URI (up to 1 MB decoded), update the accessible label and retain the rounded `frame-clip` and border. Hide `screenshot-placeholder` for transparent screenshots. Use navy text and marks in the cream area and cream text and marks in the navy area. Keep text and logos clear of the gradient transition.
 
 Run from the repository root. Set the width or viewport to the template’s native dimensions. Use local installs of Inter Tight, Inter and JetBrains Mono with resvg.
 

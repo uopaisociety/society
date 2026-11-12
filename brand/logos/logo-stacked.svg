@@ -2,37 +2,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="608" viewBox="0 0 720 608"
      role="img" aria-labelledby="asset-title asset-description">
   <title id="asset-title">AI Society stacked logo</title>
-  <desc id="asset-description">Off-white official artwork for dark backgrounds.</desc>
+  <desc id="asset-description">Cream official artwork for dark backgrounds.</desc>
   <defs>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;0,800;1,700;1,800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap");
       :root {
-        --bg-abyss: #062338;
-        --bg-petrol: #0B3550;
-        --bg-glow: #1E5678;
-        --fg-white: #F7F6F2;
-        --fg-steel: #B8CAD6;
-        --surface-chalk: #F2F5F7;
-        --border-subtle: rgba(184, 202, 214, 0.22);
-        --accent-amber: #FFC83D;
-        --accent-cyan: #38BDF8;
+        --marine-deep: #06283F;
+        --marine-navy: #073B5C;
+        --slate-blue: #668998;
+        --cream: #F7F5F0;
         --font-display: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         --font-mono: 'JetBrains Mono', monospace;
         --font-sans: 'Inter', system-ui, sans-serif;
       }
     </style>
-    <radialGradient id="bg-atmospheric" cx="75%" cy="25%" r="85%">
-      <stop offset="0%" stop-color="#1E5678"/>
-      <stop offset="56%" stop-color="#0B3550"/>
-      <stop offset="100%" stop-color="#062338"/>
-    </radialGradient>
-    <radialGradient id="bg-glow-bottom" cx="15%" cy="85%" r="60%">
-      <stop offset="0%" stop-color="#1E5678" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#1E5678" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="brand-grain" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
-    </filter>
     <symbol id="brand-logo" viewBox="172 248 692 583">
       <g transform="translate(-22 0) translate(-575.84993366 -793.24494091) scale(4.2459962354)" id="logo-artwork" fill="currentColor">
         <g transform="translate(600 314) scale(1.2) translate(-600 -314)">
@@ -52,5 +35,5 @@
       </g>
     </symbol>
   </defs>
-  <use href="#brand-logo" x="12" y="12" width="696" height="584" color="#F7F6F2"/>
+  <use href="#brand-logo" x="12" y="12" width="696" height="584" color="#F7F5F0"/>
 </svg>

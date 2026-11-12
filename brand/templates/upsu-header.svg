@@ -2,37 +2,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1640" height="856" viewBox="0 0 1640 856"
      role="img" aria-labelledby="asset-title asset-description">
   <title id="asset-title">Good ideas belong here | UPSU</title>
-  <desc id="asset-description">AI Society’s Students’ Union header, with the tagline centred for cropping.</desc>
+  <desc id="asset-description">AI Society’s Students’ Union header with centred lettering and a textured blue and cream background.</desc>
   <defs>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;0,800;1,700;1,800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap");
       :root {
-        --bg-abyss: #062338;
-        --bg-petrol: #0B3550;
-        --bg-glow: #1E5678;
-        --fg-white: #F7F6F2;
-        --fg-steel: #B8CAD6;
-        --surface-chalk: #F2F5F7;
-        --border-subtle: rgba(184, 202, 214, 0.22);
-        --accent-amber: #FFC83D;
-        --accent-cyan: #38BDF8;
+        --marine-deep: #06283F;
+        --marine-navy: #073B5C;
+        --slate-blue: #668998;
+        --cream: #F7F5F0;
         --font-display: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         --font-mono: 'JetBrains Mono', monospace;
         --font-sans: 'Inter', system-ui, sans-serif;
       }
     </style>
-    <radialGradient id="bg-atmospheric" cx="75%" cy="25%" r="85%">
-      <stop offset="0%" stop-color="#1E5678"/>
-      <stop offset="56%" stop-color="#0B3550"/>
-      <stop offset="100%" stop-color="#062338"/>
-    </radialGradient>
-    <radialGradient id="bg-glow-bottom" cx="15%" cy="85%" r="60%">
-      <stop offset="0%" stop-color="#1E5678" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#1E5678" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="brand-grain" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+    <!-- Marine mesh and paper grain from ../background.svg. -->
+    <filter id="paper-grain" filterUnits="objectBoundingBox" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".68" numOctaves="3" seed="23" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="dark-grain" values="         0 0 0 0 .06667         0 0 0 0 .09412         0 0 0 0 .12549         .30 0 0 0 -.118"/>
+      <feColorMatrix in="noise" type="matrix" result="light-grain" values="         0 0 0 0 .96863         0 0 0 0 .96078         0 0 0 0 .94118         -.23 0 0 0 .121"/>
+      <feComposite in="light-grain" in2="dark-grain" operator="over"/>
     </filter>
+    <linearGradient id="marine-base" gradientUnits="userSpaceOnUse" x1="70" y1="340" x2="1340" y2="30">
+      <stop offset="0" stop-color="#09334E" stop-opacity="1"/>
+      <stop offset="0.52" stop-color="#073B5C" stop-opacity="1"/>
+      <stop offset="1" stop-color="#0B3D5B" stop-opacity="1"/>
+    </linearGradient>
+    <radialGradient id="slate-light" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(255 36) rotate(7) scale(698 335)">
+      <stop offset="0" stop-color="#668998" stop-opacity="0.7"/>
+      <stop offset="0.5" stop-color="#668998" stop-opacity="0.413"/>
+      <stop offset="1" stop-color="#668998" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lower-navy" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(383 381) rotate(-11) scale(614 249)">
+      <stop offset="0" stop-color="#06283F" stop-opacity="0.72"/>
+      <stop offset="0.5" stop-color="#06283F" stop-opacity="0.42479999999999996"/>
+      <stop offset="1" stop-color="#06283F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="upper-navy" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1071 -53) rotate(-12) scale(593 249)">
+      <stop offset="0" stop-color="#062B44" stop-opacity="0.84"/>
+      <stop offset="0.5" stop-color="#062B44" stop-opacity="0.49559999999999993"/>
+      <stop offset="1" stop-color="#062B44" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="far-shore" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1252 338) rotate(-18) scale(534 261)">
+      <stop offset="0" stop-color="#5B7F90" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#5B7F90" stop-opacity="0.3245"/>
+      <stop offset="1" stop-color="#5B7F90" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="soft-current" gradientUnits="userSpaceOnUse" x1="160" y1="80" x2="1308" y2="332">
+      <stop offset="0" stop-color="#648697" stop-opacity="0.45"/>
+      <stop offset="0.24" stop-color="#5A8293" stop-opacity="0.69"/>
+      <stop offset="0.5" stop-color="#76949D" stop-opacity="0.68"/>
+      <stop offset="0.76" stop-color="#456F84" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#72929D" stop-opacity="0.57"/>
+    </linearGradient>
+    <filter id="shadow-blur" filterUnits="userSpaceOnUse" x="-112" y="-80" width="1624" height="560" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="62"/>
+    </filter>
+    <filter id="current-blur" filterUnits="userSpaceOnUse" x="-112" y="-80" width="1624" height="560" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+    <linearGradient id="cream-field" x1="67%" y1="81%" x2="51%" y2="54%">
+      <stop offset="0%" stop-color="#F7F5F0" stop-opacity="0"/>
+      <stop offset="23%" stop-color="#F7F5F0" stop-opacity="0.14"/>
+      <stop offset="62%" stop-color="#F7F5F0" stop-opacity="0.76"/>
+      <stop offset="100%" stop-color="#F7F5F0" stop-opacity="1"/>
+    </linearGradient>
     <symbol id="brand-logo" viewBox="172 248 692 583">
       <g transform="translate(-22 0) translate(-575.84993366 -793.24494091) scale(4.2459962354)" id="logo-artwork" fill="currentColor">
         <g transform="translate(600 314) scale(1.2) translate(-600 -314)">
@@ -52,14 +86,25 @@
       </g>
     </symbol>
   </defs>
-  <rect width="1640" height="856" fill="url(#bg-atmospheric)"/>
-  <rect width="1640" height="856" fill="url(#bg-glow-bottom)"/>
-  <rect width="1640" height="856" filter="url(#brand-grain)" opacity="0.04" pointer-events="none"/>
-  <use href="#brand-logo" x="757" y="142" width="126" height="106" color="#F7F6F2"/>
+  <svg id="brand-background" width="1640" height="856" viewBox="0 0 1400 400"
+       preserveAspectRatio="none" aria-hidden="true">
+    <g id="gradient-colour">
+      <g id="mesh-field">
+        <rect width="1400" height="400" fill="url(#marine-base)"/>
+        <rect width="1400" height="400" fill="url(#slate-light)"/>
+        <rect width="1400" height="400" fill="url(#lower-navy)"/>
+        <rect width="1400" height="400" fill="url(#upper-navy)"/>
+        <rect width="1400" height="400" fill="url(#far-shore)"/>
+      </g>
+      <path id="shadow-drift" d="M-165 148C112 67 227 124 410 216C579 303 662 339 818 266C974 193 1041 184 1190 282C1321 369 1457 391 1578 341" fill="none" stroke="#062841" stroke-width="139" stroke-linecap="round" filter="url(#shadow-blur)" opacity="0.58"/>
+      <path id="light-drift" d="M-180 23C84 -40 241 -1 399 104C539 198 635 258 789 197C938 136 1054 151 1170 235C1295 324 1448 368 1588 311" fill="none" stroke="url(#soft-current)" stroke-width="120" stroke-linecap="round" filter="url(#current-blur)" opacity="1"/>
+    </g>
+    <rect width="1400" height="400" fill="url(#cream-field)"/>
+  </svg>
+  <rect width="1640" height="856" fill="#073B5C" filter="url(#paper-grain)" opacity="0.8" aria-hidden="true"/>
+  <use href="#brand-logo" x="758" y="139" width="124" height="104" color="#073B5C"/>
   <!-- AGENT SLOT: headline-1 (Max 11 chars, one line) -->
-  <text id="slot-headline-1" data-slot="headline-1" x="820" y="420" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="96" font-weight="800" letter-spacing="-2.88" text-anchor="middle" fill="#F7F6F2">GOOD IDEAS</text>
-  <!-- AGENT SLOT: headline-accent (Max 10 chars, one line) -->
-  <text id="slot-headline-accent" data-slot="headline-accent" x="820" y="526" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="96" font-weight="800" letter-spacing="-2.88" font-style="italic" text-anchor="middle" fill="#B8CAD6">BELONG</text>
-  <!-- AGENT SLOT: headline-2 (Max 10 chars, one line) -->
-  <text id="slot-headline-2" data-slot="headline-2" x="820" y="632" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="96" font-weight="800" letter-spacing="-2.88" text-anchor="middle" fill="#F7F6F2">HERE.</text>
+  <text id="slot-headline-1" data-slot="headline-1" x="820" y="366" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="95" font-weight="800" letter-spacing="-2.85" text-anchor="middle" fill="#073B5C">GOOD IDEAS</text>
+  <!-- AGENT SLOT: headline-accent (Max 12 chars, one line) -->
+  <text id="slot-headline-accent" data-slot="headline-accent" x="820" y="464" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="95" font-weight="800" letter-spacing="-2.85" font-style="italic" text-anchor="middle" fill="#073B5C">BELONG HERE.</text>
 </svg>
