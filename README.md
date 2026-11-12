@@ -9,7 +9,7 @@ We're a free [UPSU](https://upsu.net/groups/8f8dp/ai-society) society, being reb
 ## What's here?
 
 - **[Roadmap](ROADMAP.md)** — Priorities for the 2026/27 rebuild.
-- **[Brand](brand/)** — Logo, lockup, background and avatar SVGs for posts and documents.
+- **[Brand](brand/)** — Editable WhatsApp and Instagram templates, brand guidelines, logos and backgrounds.
 - **[Discussions & proposals](https://github.com/uopaisociety/society/issues)** — Ideas for events, workshops, projects and improvements.
 - **Decisions** — A public record of important society decisions.
 - **Resources** — Notes and materials for members and future committees.

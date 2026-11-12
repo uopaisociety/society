@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800"
+     role="img" aria-labelledby="asset-title asset-description">
+  <title id="asset-title">AI Society | WhatsApp showcase template</title>
+  <desc id="asset-description">Editable showcase with a landscape image slot and space to describe it.</desc>
+  <defs>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,700;0,800;1,700;1,800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap");
+      :root {
+        --marine-deep: #06283F;
+        --marine-navy: #073B5C;
+        --slate-blue: #668998;
+        --cream: #F7F5F0;
+        --font-display: 'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-mono: 'JetBrains Mono', monospace;
+        --font-sans: 'Inter', system-ui, sans-serif;
+      }
+    </style>
+    <!-- Colour fields and grain from the AI Society gradient proof. -->
+    <radialGradient id="cream-slate" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(1300 422) rotate(-18) scale(840 255)">
+      <stop offset="0" stop-color="#668998" stop-opacity=".53"/>
+      <stop offset=".44" stop-color="#668998" stop-opacity=".28"/>
+      <stop offset=".75" stop-color="#668998" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#668998" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cream-reflection" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="1" gradientTransform="translate(49 -20) rotate(9) scale(600 155)">
+      <stop offset="0" stop-color="#668998" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#668998" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fine-grain" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" seed="23" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="shadow-grain" values="0 0 0 0 .0667  0 0 0 0 .0941  0 0 0 0 .1255  .34 0 0 0 -.142"/>
+      <feColorMatrix in="noise" type="matrix" result="light-grain" values="0 0 0 0 .9686  0 0 0 0 .9608  0 0 0 0 .9412  -.32 0 0 0 .175"/>
+      <feComposite in="light-grain" in2="shadow-grain" operator="over"/>
+    </filter>
+    <symbol id="brand-logo" viewBox="172 248 692 450">
+      <g transform="translate(-22 0) translate(-575.84993366 -793.24494091) scale(4.2459962354)" id="logo-artwork" fill="currentColor">
+        <g transform="translate(600 314) scale(1.2) translate(-600 -314)">
+          <g id="ai-society" aria-label="AI Society" fill-rule="evenodd" transform="translate(175.41909833 172.66980773) scale(0.4500968704)">
+            <path id="ai-society-line-1" transform="translate(169.0000000 187.6722702) scale(0.250000000)" d="M0.000 774.000C0.000 772.900 0.450 772.000 1.000 772.000C1.550 772.000 2.000 771.580 2.000 771.067C2.000 770.017 16.468 743.247 24.466 729.500C27.346 724.550 31.967 716.225 34.736 711.000C39.758 701.522 62.605 659.871 73.665 640.032L79.500 629.564 89.000 624.212C94.225 621.269 102.325 616.800 107.000 614.280C111.675 611.761 119.824 607.096 125.110 603.914C130.395 600.732 144.570 593.097 156.610 586.947C168.649 580.797 181.650 574.073 185.500 572.006C189.350 569.938 199.475 564.998 208.000 561.028C216.525 557.058 228.000 551.671 233.500 549.058C241.499 545.256 259.082 537.876 276.500 531.008C277.600 530.574 282.550 528.603 287.500 526.628C308.326 518.317 342.288 507.568 374.500 499.092C389.435 495.162 430.782 488.326 454.500 485.865C473.781 483.865 525.349 484.167 544.000 486.390C584.388 491.203 625.526 501.580 656.260 514.707C658.328 515.590 660.269 516.064 660.573 515.760C661.263 515.070 644.321 481.129 616.269 427.000C604.440 404.175 587.779 372.000 579.244 355.500C570.709 339.000 558.000 314.475 551.002 301.000C544.005 287.525 533.417 267.050 527.473 255.500C515.537 232.307 514.811 231.000 513.859 231.000C513.061 231.000 497.706 257.899 489.027 274.500C485.577 281.100 482.407 286.950 481.982 287.500C481.558 288.050 479.068 292.550 476.450 297.500C473.832 302.450 470.014 309.425 467.965 313.000C465.917 316.575 461.868 324.000 458.968 329.500C456.068 335.000 452.936 340.625 452.009 342.000C451.082 343.375 447.482 349.900 444.009 356.500C440.537 363.100 437.127 369.400 436.431 370.500C435.736 371.600 432.277 377.900 428.745 384.500C425.213 391.100 418.362 403.475 413.522 412.000C408.681 420.525 403.828 429.075 402.737 431.000C401.645 432.925 398.951 437.988 396.750 442.250C393.437 448.664 392.332 450.000 390.339 450.000C383.805 450.000 319.694 469.921 290.008 481.175C277.718 485.834 252.825 495.660 248.500 497.560C227.528 506.770 219.582 510.193 214.976 512.001C211.964 513.183 193.975 522.066 175.000 531.741C156.025 541.416 135.209 552.028 128.742 555.325C122.276 558.621 116.753 561.087 116.471 560.804C115.910 560.244 128.820 535.481 138.003 519.500C141.164 514.000 145.804 505.400 148.315 500.388C150.827 495.377 155.303 487.052 158.263 481.888C166.686 467.195 177.000 448.342 177.000 447.640C177.000 447.290 179.984 441.715 183.630 435.252C187.277 428.788 194.749 415.175 200.235 405.000C205.721 394.825 214.597 378.625 219.961 369.000C229.695 351.532 245.917 321.754 257.550 300.000C267.038 282.257 278.327 261.979 281.489 257.000C283.061 254.525 285.659 249.608 287.263 246.074C288.867 242.540 295.237 230.615 301.418 219.574C307.600 208.533 315.199 194.718 318.305 188.873C321.411 183.029 325.988 174.803 328.476 170.595C330.964 166.386 333.000 162.771 333.000 162.561C333.000 162.351 334.738 159.101 336.862 155.340C338.986 151.578 342.509 145.125 344.690 141.000C346.871 136.875 351.586 128.325 355.167 122.000C358.749 115.675 363.617 106.900 365.985 102.500C375.669 84.510 383.821 69.670 391.529 56.000C393.855 51.875 398.140 44.000 401.052 38.500C403.963 33.000 407.227 26.925 408.304 25.000C409.382 23.075 412.498 17.450 415.229 12.500C417.960 7.550 420.715 2.952 421.350 2.282C422.238 1.348 445.153 0.966 520.003 0.640C573.626 0.406 619.577 0.504 622.115 0.858L626.730 1.500 633.508 14.500C637.237 21.650 644.454 35.600 649.547 45.500C654.640 55.400 662.018 69.575 665.943 77.000C669.868 84.425 675.507 95.545 678.473 101.711C681.440 107.878 685.673 116.015 687.880 119.794C690.087 123.573 697.932 138.553 705.314 153.083C712.695 167.612 725.614 192.775 734.022 209.000C759.949 259.032 835.624 408.383 848.281 434.500C851.480 441.100 855.200 448.525 856.550 451.000C857.899 453.475 863.565 464.725 869.140 476.000C874.716 487.275 885.199 508.425 892.435 523.000C899.671 537.575 906.969 552.425 908.652 556.000C910.335 559.575 915.155 569.333 919.362 577.685L927.011 592.871 926.755 683.185L926.500 773.500 913.500 773.394C889.946 773.203 873.490 770.381 840.500 760.878C802.349 749.887 762.481 728.857 700.254 686.900C654.728 656.203 615.213 631.599 598.500 623.541C557.837 603.937 545.446 598.832 520.500 591.409C502.185 585.958 483.230 581.714 464.000 578.756C451.555 576.842 445.461 576.525 421.000 576.521C390.766 576.515 385.141 577.031 361.251 581.998C348.953 584.556 345.000 586.028 345.000 588.051C345.000 588.494 343.484 591.476 341.632 594.678C336.401 603.720 316.820 637.703 312.348 645.500C310.140 649.350 304.433 659.176 299.667 667.337C294.900 675.497 291.000 682.354 291.000 682.574C291.000 682.795 288.130 687.818 284.623 693.738C281.115 699.657 273.088 713.513 266.784 724.528C260.481 735.543 251.130 751.631 246.004 760.278L236.685 776.000 118.343 776.000L0.000 776.000 0.000 774.000ZM972.250 772.338C971.253 771.935 971.000 693.914 971.000 386.917L971.000 2.000 1085.500 2.000L1200.000 2.000 1200.000 387.500L1200.000 773.000 1086.750 772.921C1024.463 772.878 972.938 772.615 972.250 772.338Z"/>
+          </g>
+        </g>
+      </g>
+    </symbol>
+    <clipPath id="frame-clip">
+      <rect x="822" y="155" width="695" height="500" rx="24"/>
+    </clipPath>
+  </defs>
+  <svg id="brand-background" width="1600" height="800" viewBox="0 0 1400 400"
+       preserveAspectRatio="none" aria-hidden="true">
+    <rect width="1400" height="400" fill="#F7F5F0"/>
+    <rect width="1400" height="400" fill="url(#cream-reflection)"/>
+    <rect width="1400" height="400" fill="url(#cream-slate)"/>
+  </svg>
+  <rect width="1600" height="800" fill="#073B5C" filter="url(#fine-grain)" opacity="0.49" aria-hidden="true"/>
+  <!-- AGENT SLOT: tag (Max 30 chars, one line) -->
+  <text id="slot-tag" data-slot="tag" x="84" y="124" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="500" letter-spacing="0.55" fill="#073B5C">SHOWCASE</text>
+  <!-- AGENT SLOT: headline-1 (Max 9 chars, one line) -->
+  <text id="slot-headline-1" data-slot="headline-1" x="77" y="330" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="120" font-weight="800" letter-spacing="-3.6" fill="#073B5C">PROJECT</text>
+  <!-- AGENT SLOT: headline-accent (Max 9 chars, one line) -->
+  <text id="slot-headline-accent" data-slot="headline-accent" x="80" y="453" font-family="'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="120" font-weight="800" letter-spacing="-3.6" font-style="italic" fill="#073B5C">NAME.</text>
+  <!-- AGENT SLOT: subhead (Max 40 chars, one line) -->
+  <text id="slot-subhead" data-slot="subhead" x="84" y="545" font-family="'Inter', system-ui, sans-serif" font-size="31" font-weight="500" fill="#073B5C">Describe what’s in the image.</text>
+  <path d="M84 617H745" stroke="#073B5C" stroke-width="1.5" stroke-opacity=".32"/>
+  <!-- AGENT SLOT: cta-text (Max 24 chars, one line) -->
+  <text id="slot-cta-text" data-slot="cta-text" x="84" y="668" font-family="'JetBrains Mono', monospace" font-size="21" font-weight="500" letter-spacing="0.55" fill="#073B5C">CALL TO ACTION</text>
+  <!-- AGENT SLOT: cta-url (Max 44 chars, one line. Optional link label) -->
+  <text id="slot-cta-url" data-slot="cta-url" x="84" y="706" font-family="'JetBrains Mono', monospace" font-size="21" font-weight="500" letter-spacing="0.55" fill="#073B5C"></text>
+  <g id="screenshot-placeholder" aria-hidden="true">
+    <rect x="822" y="155" width="695" height="500" rx="24" fill="#F7F5F0" fill-opacity=".96"/>
+    <rect x="840" y="173" width="659" height="464" rx="16"
+          fill="none" stroke="#073B5C" stroke-opacity=".38" stroke-width="2" stroke-dasharray="7 8"/>
+    <g transform="translate(1169.5 405)" fill="none" stroke="#073B5C" stroke-opacity=".58" stroke-width="2">
+      <rect x="-38" y="-29" width="76" height="58" rx="8"/>
+      <circle cx="-16" cy="-10" r="5"/>
+      <path d="m-37 20 20-17L-4 14l17-22 24 29" stroke-linejoin="round"/>
+    </g>
+  </g>
+  <!-- AGENT SLOT: screenshot (set href to a PNG or JPEG data URI, max 1 MB decoded, and update aria-label) -->
+  <image id="slot-screenshot" data-slot="screenshot" x="822" y="155" width="695" height="500"
+         aria-label="Add a screenshot" preserveAspectRatio="xMidYMid slice" clip-path="url(#frame-clip)"/>
+  <rect x="822" y="155" width="695" height="500" rx="24" fill="none" stroke="#073B5C" stroke-width="2"/>
+  <use href="#brand-logo" x="1405" y="680" width="111" height="74" color="#073B5C"/>
+</svg>
