@@ -1,10 +1,12 @@
-name: Publish partnership prospectus
+name: Publish society pages
 
 on:
   push:
     branches: [main]
     paths:
       - brand/partnerships/index.html
+      - join/**
+      - brand/logos/logo-stacked.svg
       - .github/workflows/partnerships-pages.yml
   workflow_dispatch:
 
@@ -29,8 +31,12 @@ jobs:
         with:
           persist-credentials: false
       - uses: actions/configure-pages@v5
-      - name: Stage the public portal
-        run: install -Dm644 brand/partnerships/index.html _site/brand/partnerships/index.html
+      - name: Stage the public pages
+        run: |
+          install -Dm644 brand/partnerships/index.html _site/brand/partnerships/index.html
+          install -Dm644 join/index.html _site/join/index.html
+          install -Dm644 join/projector.js _site/join/projector.js
+          install -Dm644 brand/logos/logo-stacked.svg _site/join/logo.svg
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
