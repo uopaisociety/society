@@ -120,6 +120,8 @@
     @media (hover: hover) and (pointer: fine) {
       html:fullscreen .fullscreen-toggle { display: none; }
     }
+    html:fullscreen[data-cursor-idle],
+    html:fullscreen[data-cursor-idle] * { cursor: none; }
     @keyframes dismiss-motion-toggle { to { opacity: 0; } }
     .motion-toggle:is(:hover, :focus-visible),
     body[data-motion-paused] .motion-toggle { animation: none; }
@@ -149,30 +151,49 @@
       white-space: nowrap;
     }
     main {
+      --qr-size: min(59vh, 470px);
       display: grid;
-      grid-template-columns: minmax(0, 1.23fr) minmax(0, .77fr);
+      grid-template-columns: minmax(0, var(--qr-size)) minmax(0, 418px);
       align-items: center;
-      gap: clamp(40px, 6vw, 92px);
+      justify-content: center;
+      gap: clamp(36px, 5vw, 72px);
       width: min(calc(100% - 96px), 1240px);
       margin-inline: auto;
       padding-block: clamp(16px, 2.6vh, 32px) clamp(18px, 3vh, 40px);
     }
-    .join { justify-self: center; width: min(100%, 520px); }
+    .join { min-width: 0; width: min(100%, var(--qr-size)); }
     h1, h2 { margin: 0; font-family: var(--display); }
     h1 { font-size: clamp(1.75rem, 3vw, 2.625rem); font-weight: 700; letter-spacing: -.025em; line-height: 1.14; }
     .benefits { margin: 8px 0 16px; font-size: clamp(.96rem, 1.3vw, 1.16rem); line-height: 1.45; color: #e5eef0; }
     .scan { margin: 0 0 14px; font-size: clamp(1rem, 1.37vw, 1.2rem); font-weight: 600; line-height: 1.4; }
     .qr {
       display: block;
-      width: min(100%, 59vh, 470px);
+      width: 100%;
       height: auto;
       background: #fff;
       border-radius: 12px;
       image-rendering: pixelated;
       box-shadow: 0 12px 32px #06283f24;
     }
-    main:has(.event[hidden]) { grid-template-columns: minmax(0, 1fr); }
-    main:has(.event[hidden]) .join { justify-self: start; }
+    main:has(.event[hidden]) { grid-template-columns: minmax(0, var(--qr-size)); }
+
+    @supports (grid-template-rows: subgrid) {
+      @media (min-width: 821px) {
+        main {
+          grid-template-rows: auto auto;
+          align-content: center;
+          align-items: start;
+          row-gap: 0;
+        }
+        .join {
+          grid-column: 1;
+          grid-row: 1 / 3;
+          display: grid;
+          grid-template-rows: subgrid;
+        }
+        .event { grid-column: 2; grid-row: 2; }
+      }
+    }
 
     .event {
       position: relative;
@@ -245,8 +266,7 @@
       header { padding-top: 24px; }
       .ambient::before { left: 48%; top: 58%; }
       main { width: min(calc(100% - 40px), 600px); grid-template-columns: minmax(0, 1fr); gap: 32px; }
-      .join { justify-self: start; }
-      .qr { width: min(100%, 360px); }
+      .join { width: min(100%, 360px); }
       .event { min-height: clamp(310px, 84vw, 370px); gap: 28px; }
       .game-art { width: 49%; right: -6%; bottom: -4%; }
     }
@@ -261,7 +281,7 @@
       .event-name, .edition { color: var(--cream); }
     }
   </style>
-  <script src="projector.js?v=fullscreen" defer></script>
+  <script src="projector.js?v=cursor-idle" defer></script>
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div>
@@ -272,9 +292,11 @@
     </header>
     <main>
       <section class="join" aria-labelledby="join-heading">
-        <h1 id="join-heading">Join the AI Society</h1>
-        <p class="benefits">Workshops, build nights and people to build with.</p>
-        <p class="scan">Scan to join our WhatsApp group</p>
+        <div>
+          <h1 id="join-heading">Join the AI Society</h1>
+          <p class="benefits">Workshops, build nights and people to build with.</p>
+          <p class="scan">Scan to join our WhatsApp group</p>
+        </div>
         <img class="qr" src="data:image/png;base64,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" width="658" height="658" alt="Scan this code to join the AI Society WhatsApp group">
       </section>
       <aside class="event" id="event" aria-labelledby="event-heading" data-ends="2026-11-19T20:00:00Z">
