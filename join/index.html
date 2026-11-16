@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' blob: data:; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Join AI Society | University of Portsmouth</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@700;800&family=JetBrains+Mono:wght@500&display=swap">
+  <style>
+    :root {
+      color-scheme: light;
+      --deep: #06283f;
+      --navy: #073b5c;
+      --slate: #668998;
+      --cream: #f7f5f0;
+      --display: "Inter Tight", Inter, system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--deep);
+      color: var(--cream);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body {
+      min-height: 100svh;
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 110% 103%, var(--cream) 12%, #e0ded7 27%, transparent 57%),
+        radial-gradient(ellipse at 62% -35%, var(--slate), transparent 67%),
+        linear-gradient(127deg, var(--deep) 18%, var(--navy) 60%, var(--slate) 100%);
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .32;
+      background: url("data:image/svg+xml,%3Csvg width='192' height='192' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.62' numOctaves='3' seed='23' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.5' filter='url(%23g)'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+    }
+    .shell { position: relative; width: min(100% - 96px, 1248px); margin-inline: auto; }
+    header { display: flex; align-items: center; gap: 20px; padding-block: 24px; border-bottom: 1.5px solid #f7f5f060; }
+    .logo { width: 64px; height: auto; }
+    .university { border-left: 1.5px solid #f7f5f068; padding-left: 20px; font-size: .95rem; font-weight: 600; }
+    .layout { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: clamp(40px, 7vw, 112px); padding-block: clamp(32px, 5vh, 72px); }
+    .layout:has(.event[hidden]) { grid-template-columns: minmax(0, 1fr); }
+    .join { width: fit-content; max-width: 100%; }
+    .layout:has(.event[hidden]) .join { margin-inline: auto; text-align: center; }
+    h1, h2 { margin: 0; font-family: var(--display); font-weight: 800; letter-spacing: -.03em; }
+    h1 { font-size: clamp(2.75rem, 5.2vw, 5.5rem); line-height: .99; }
+    .scan { margin: 16px 0 24px; font-size: clamp(1rem, 1.8vw, 1.4rem); line-height: 1.4; }
+    .qr {
+      display: grid;
+      place-items: center;
+      width: min(100%, clamp(264px, 47vh, 464px));
+      aspect-ratio: 1;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #fff;
+      color: var(--navy);
+      box-shadow: 0 18px 56px #06283f55;
+    }
+    .layout:has(.event[hidden]) .qr { margin-inline: auto; }
+    .qr img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+    .setup { padding: 24px; text-align: center; }
+    .setup p { margin: 12px 0 0; font-size: .9rem; line-height: 1.45; }
+    button {
+      appearance: none;
+      background: var(--navy);
+      color: var(--cream);
+      border: 1.5px solid transparent;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font: 600 .95rem Inter, system-ui, sans-serif;
+      cursor: pointer;
+    }
+    button:hover { background: var(--deep); }
+    :focus-visible { outline: 3px solid #668998; outline-offset: 4px; }
+    .change { margin-left: auto; background: var(--deep); border-color: #f7f5f068; font-size: .8rem; }
+    .status { max-width: 40ch; margin: 12px 0 0; font-size: .9rem; }
+    .event {
+      min-width: 0;
+      overflow: hidden;
+      border: 1.5px solid #fff9;
+      border-radius: 24px;
+      background: var(--cream);
+      color: var(--navy);
+      box-shadow: 0 20px 64px #06283f38;
+    }
+    .event-art {
+      height: clamp(112px, 23vh, 224px);
+      background: var(--navy);
+    }
+    .event-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 53% 36%; }
+    .event-details { padding: clamp(20px, 3vw, 36px); }
+    .event-date { margin: 0 0 14px; font: 500 .78rem/1.45 var(--mono); letter-spacing: .045em; text-transform: uppercase; }
+    h2 { font-size: clamp(1.85rem, 3vw, 3.25rem); line-height: 1.03; }
+    .edition { margin: 7px 0 16px; font-size: clamp(1.03rem, 1.4vw, 1.2rem); font-weight: 600; }
+    .event-detail { margin: 8px 0 0; font-size: .97rem; line-height: 1.45; }
+    .event-link { display: inline-block; margin-top: 16px; color: inherit; font-weight: 600; font-size: .93rem; text-underline-offset: .22em; }
+    @media (max-width: 760px) {
+      .shell { width: calc(100% - 40px); }
+      header { gap: 12px; padding-block: 18px; }
+      .university { padding-left: 12px; font-size: .78rem; }
+      .logo { width: 52px; }
+      .change { padding: 8px; }
+      .layout { grid-template-columns: 1fr; gap: 32px; }
+      .join { width: 100%; }
+      .qr { width: min(100%, 400px); }
+      .event { max-width: 480px; }
+    }
+  </style>
+  <script src="projector.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <img class="logo" src="logo.svg" alt="AI Society">
+      <span class="university">University of Portsmouth</span>
+      <button class="change" type="button" id="change" hidden>Change QR</button>
+    </header>
+    <main class="layout">
+      <section class="join" aria-labelledby="join-heading">
+        <h1 id="join-heading">Join us on<br>WhatsApp</h1>
+        <p class="scan">Scan with your phone camera to join the AI Society.</p>
+        <input id="qr-file" type="file" accept="image/png" hidden>
+        <div class="qr">
+          <img id="invite" alt="QR code to join the AI Society WhatsApp group" hidden>
+          <div class="setup" id="setup">
+            <button id="load" type="button">Load WhatsApp QR</button>
+            <p>Committee members can select the private QR image from this device.</p>
+          </div>
+        </div>
+        <p class="status" id="status" role="status"></p>
+        <noscript>Enable JavaScript to load the committee QR image.</noscript>
+      </section>
+      <aside class="event" id="event" aria-labelledby="event-heading" data-ends="2026-11-19T20:00:00Z">
+        <div class="event-art"><img src="data:image/webp;base64,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" alt=""></div>
+        <div class="event-details">
+          <p class="event-date"><time datetime="2026-11-19T18:30:00Z">Thu 19 Nov · 18:30–20:00</time></p>
+          <h2 id="event-heading">30-Minute AI Game Jam</h2>
+          <p class="edition">Flappy Bird Edition</p>
+          <p class="event-detail">Future Technology Centre · 2nd floor</p>
+          <p class="event-detail">Free. Bring a laptop. No coding needed.</p>
+          <a class="event-link" href="https://luma.com/mp9mkiwa">Event sign-up on Luma</a>
+        </div>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>
