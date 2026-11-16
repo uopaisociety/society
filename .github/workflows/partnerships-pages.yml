@@ -35,6 +35,7 @@ jobs:
         run: |
           install -Dm644 brand/partnerships/index.html _site/brand/partnerships/index.html
           install -Dm644 join/index.html _site/join/index.html
+          install -Dm644 join/icon.svg _site/join/icon.svg
           install -Dm644 join/projector.js _site/join/projector.js
           install -Dm644 brand/logos/logo-stacked.svg _site/brand/logos/logo-stacked.svg
       - uses: actions/upload-pages-artifact@v4
