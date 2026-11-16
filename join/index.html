@@ -64,23 +64,66 @@
       66% { transform: translate(9%, -29%) scale(.92); }
     }
     body[data-motion-paused] .ambient::before { animation-play-state: paused; }
-    .motion-toggle {
+    .presenter-controls {
       position: fixed;
       z-index: 3;
       inset: auto 16px 14px auto;
-      padding: 5px 9px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .presenter-controls button {
       border: 1px solid #f7f5f052;
-      border-radius: 6px;
       background: var(--deep);
       color: var(--cream);
-      font: 500 .72rem Inter, system-ui, sans-serif;
       cursor: pointer;
-      animation: dismiss-motion-toggle .4s ease 5s forwards;
     }
+    .motion-toggle {
+      --dismiss-delay: 5s;
+      position: relative;
+      overflow: hidden;
+      border-radius: 999px;
+      padding: 5px 9px 7px;
+      font: 500 .72rem Inter, system-ui, sans-serif;
+      animation: dismiss-motion-toggle .4s ease var(--dismiss-delay) forwards;
+    }
+    .motion-toggle::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 2px;
+      background: currentColor;
+      transform-origin: left;
+      animation: motion-countdown var(--dismiss-delay) linear forwards;
+    }
+    @keyframes motion-countdown { to { transform: scaleX(0); } }
+    .motion-toggle:is(:hover, :focus-visible)::after,
+    body[data-motion-paused] .motion-toggle::after { animation: none; }
+    body[data-motion-paused] .motion-toggle::after { opacity: 0; }
+    .fullscreen-toggle {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 36px;
+      padding: 0;
+      border-radius: 999px;
+    }
+    .fullscreen-toggle svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .fullscreen-exit,
+    html:fullscreen .fullscreen-enter { display: none; }
+    html:fullscreen .fullscreen-exit { display: inline; }
     @keyframes dismiss-motion-toggle { to { opacity: 0; } }
     .motion-toggle:is(:hover, :focus-visible),
     body[data-motion-paused] .motion-toggle { animation: none; }
-    .motion-toggle:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+    .presenter-controls button:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
     @media (prefers-reduced-motion: reduce) {
       .ambient::before { animation: none; }
       .motion-toggle { display: none; }
@@ -242,6 +285,14 @@
       </aside>
     </main>
   </div>
-  <button class="motion-toggle" type="button" id="motion-toggle" hidden>Pause background</button>
+  <div class="presenter-controls">
+    <button class="motion-toggle" type="button" id="motion-toggle" hidden>Pause background</button>
+    <button class="fullscreen-toggle" type="button" id="fullscreen-toggle" aria-label="Enter fullscreen" title="Enter fullscreen" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path class="fullscreen-enter" d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/>
+        <path class="fullscreen-exit" d="m6 6 12 12M18 6 6 18"/>
+      </svg>
+    </button>
+  </div>
 </body>
 </html>
