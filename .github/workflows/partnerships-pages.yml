@@ -6,7 +6,7 @@ on:
     paths:
       - brand/partnerships/index.html
       - join/**
-      - brand/logos/logo-stacked.svg
+      - brand/logos/logo-lockup-uop.svg
       - .github/workflows/partnerships-pages.yml
   workflow_dispatch:
 
@@ -37,7 +37,7 @@ jobs:
           install -Dm644 join/index.html _site/join/index.html
           install -Dm644 join/icon.svg _site/join/icon.svg
           install -Dm644 join/projector.js _site/join/projector.js
-          install -Dm644 brand/logos/logo-stacked.svg _site/brand/logos/logo-stacked.svg
+          install -Dm644 brand/logos/logo-lockup-uop.svg _site/brand/logos/logo-lockup-uop.svg
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

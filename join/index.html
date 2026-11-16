@@ -28,7 +28,6 @@
       min-height: 100svh;
       margin: 0;
       background:
-        radial-gradient(ellipse 35% 54% at 100% 87%, #f7f5f0a8 0%, #668998a0 46%, transparent 100%),
         radial-gradient(ellipse 22% 36% at 63% 104%, #e8e7df69 0%, #66899860 50%, transparent 100%),
         radial-gradient(ellipse 52% 56% at 58% -8%, #6689988c 0%, transparent 100%),
         linear-gradient(124deg, var(--deep) 22%, var(--navy) 72%, #245570);
@@ -42,17 +41,57 @@
       mix-blend-mode: soft-light;
       pointer-events: none;
     }
-    body::before { position: fixed; }
-    .shell { position: relative; width: min(calc(100% - 96px), 1240px); margin-inline: auto; }
+    body::before { position: fixed; z-index: 1; }
+    .ambient {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .ambient::before {
+      content: "";
+      position: absolute;
+      width: clamp(380px, 66vw, 1080px);
+      aspect-ratio: 1.18;
+      left: 59%;
+      top: 35%;
+      background: radial-gradient(ellipse, #f7f5f0a8 0%, #aebbc0a8 29%, #66899869 49%, transparent 71%);
+      animation: drift 32s ease-in-out infinite;
+    }
+    @keyframes drift {
+      0%, 100% { transform: translate(1%, 9%) scale(1); }
+      33% { transform: translate(-9%, -15%) scale(1.09); }
+      66% { transform: translate(9%, -29%) scale(.92); }
+    }
+    body[data-motion-paused] .ambient::before { animation-play-state: paused; }
+    .motion-toggle {
+      position: fixed;
+      z-index: 3;
+      inset: auto 16px 14px auto;
+      padding: 5px 9px;
+      border: 1px solid #f7f5f052;
+      border-radius: 6px;
+      background: var(--deep);
+      color: var(--cream);
+      font: 500 .72rem Inter, system-ui, sans-serif;
+      cursor: pointer;
+    }
+    .motion-toggle:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      .ambient::before { animation: none; }
+      .motion-toggle { display: none; }
+    }
+    .shell { position: relative; z-index: 2; width: min(calc(100% - 96px), 1240px); margin-inline: auto; }
     header {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 16px;
       min-height: 82px;
       border-bottom: 1px solid #f7f5f04d;
     }
-    .logo { display: block; width: 56px; height: auto; }
-    .university { padding-left: 16px; border-left: 1px solid #f7f5f060; font-size: .92rem; font-weight: 600; }
+    .logo { display: block; width: clamp(155px, 21vw, 248px); height: auto; }
+    .handle { font: 500 clamp(.72rem, 1.15vw, .94rem)/1.4 var(--mono); color: #e5eef0; }
     main {
       display: grid;
       grid-template-columns: minmax(0, 1.23fr) minmax(0, .77fr);
@@ -147,8 +186,7 @@
     @media (max-width: 820px) {
       .shell { width: min(calc(100% - 40px), 600px); }
       header { min-height: 68px; }
-      .logo { width: 48px; }
-      .university { font-size: .82rem; }
+      .ambient::before { left: 48%; top: 58%; }
       main { min-height: auto; grid-template-columns: minmax(0, 1fr); gap: 32px; }
       .join { justify-self: start; }
       .qr { width: min(100%, 360px); }
@@ -162,16 +200,18 @@
     }
     @media (prefers-contrast: more) {
       body, .event { background: var(--deep); }
+      .ambient { opacity: .35; }
       .event-name, .edition { color: var(--cream); }
     }
   </style>
   <script src="projector.js" defer></script>
 </head>
 <body>
+  <div class="ambient" aria-hidden="true"></div>
   <div class="shell">
     <header>
-      <img class="logo" src="../brand/logos/logo-stacked.svg" alt="AI Society">
-      <span class="university">University of Portsmouth</span>
+      <img class="logo" src="../brand/logos/logo-lockup-uop.svg" width="1200" height="360" alt="AI Society, University of Portsmouth">
+      <span class="handle">@uopaisociety</span>
     </header>
     <main>
       <section class="join" aria-labelledby="join-heading">
@@ -194,5 +234,6 @@
       </aside>
     </main>
   </div>
+  <button class="motion-toggle" type="button" id="motion-toggle" hidden>Pause background</button>
 </body>
 </html>
