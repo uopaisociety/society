@@ -13,15 +13,31 @@ motionToggle.addEventListener("click", () => {
 const fullscreenToggle = document.querySelector("#fullscreen-toggle");
 
 if (document.fullscreenEnabled) {
-  const updateFullscreenLabel = () => {
+  const page = document.documentElement;
+  let cursorTimeout;
+
+  const resetCursor = () => {
+    clearTimeout(cursorTimeout);
+    page.removeAttribute("data-cursor-idle");
+
+    if (document.fullscreenElement === page) {
+      cursorTimeout = setTimeout(() => page.setAttribute("data-cursor-idle", ""), 2000);
+    }
+  };
+
+  const syncFullscreen = () => {
     const label = document.fullscreenElement ? "Exit fullscreen" : "Enter fullscreen";
     fullscreenToggle.setAttribute("aria-label", label);
     fullscreenToggle.title = label;
+    resetCursor();
   };
 
   fullscreenToggle.hidden = false;
-  updateFullscreenLabel();
-  document.addEventListener("fullscreenchange", updateFullscreenLabel);
+  syncFullscreen();
+  document.addEventListener("fullscreenchange", syncFullscreen);
+  document.addEventListener("pointermove", () => {
+    if (document.fullscreenElement === page) resetCursor();
+  }, { passive: true });
 
   fullscreenToggle.addEventListener("click", async () => {
     try {
