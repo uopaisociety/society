@@ -267,7 +267,8 @@
       main {
         /* Scale the 1366 × 768 composition, reserving room for the header. */
         --available-height: calc(100svh - var(--header-top) - var(--lockup-width) * .3 - 8px);
-        --stage-unit: max(.4px, min(calc(100vw / 1366), calc(var(--available-height) / 638)));
+        --max-qr-size: 640px;
+        --stage-unit: clamp(.4px, min(calc(100vw / 1366), calc(var(--available-height) / 638)), calc(var(--max-qr-size) / 453));
         --qr-size: calc(453 * var(--stage-unit));
         --poster-size: calc(418 * var(--stage-unit));
         column-gap: calc(68 * var(--stage-unit));
