@@ -1,6 +1,6 @@
 # Quick social templates
 
-The everyday palette is **navy #073B5C** and **cream #F7F5F0**. Start a campaign in either theme and alternate on the next distinct post. Use the same theme across all exports of one announcement. A later reminder can switch themes while keeping the title and layout. Maintain the existing campaign gradient across an Instagram carousel when you use the panoramic template.
+The everyday templates use the official **grainy navy mesh** and **grainy cream wash**. They reuse the original colour fields and noise recipe, with cream lettering over navy and navy lettering over cream. Use one gradient across all exports of an announcement, then alternate on the next post. A later reminder can change gradients and keep the same title and layout.
 
 ## Pick a template
 
@@ -23,19 +23,35 @@ Copy an SVG and edit the text in Inkscape or by `slot-…` ID. The displayed wor
 | Recap or member project | Outcome or project name. Use a real photo or screenshot if it adds evidence. Remove event logistics. | Describe what happened, credit confirmed contributors and link the demo or repo if available. |
 | Partner announcement | State the concrete thing students can access or do. Use approved partner artwork when needed. | Name the partner, say what they are contributing and give one next step. |
 
-Give the headline the most space. Use one detail line to answer the next question: who it is for, what to bring, or what people will leave with. Put essential logistics in the caption or message as well as the card. Check the PNG at roughly 320 px wide, where it should still be clear what this is and when it happens. The base colour pair measures about 10.8:1 in either direction. Use 4.5:1 as the minimum for ordinary text if you add any new colour. Check the text against the actual background behind it. [Visual hierarchy](https://www.nngroup.com/articles/principles-visual-design/) · [Front-loading](https://service-manual.ons.gov.uk/content/writing-for-users/structuring-content) · [W3C contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
+Give the headline the most space. Use one detail line to say who it is for, what to bring or what people will leave with. Put essential logistics in the caption or message as well as the card. Check the PNG at roughly 320 px wide, where it should still be clear what this is and when it happens. Use 4.5:1 as the minimum contrast for ordinary text. Check the lightest area behind cream text and the darkest area behind navy text on the rendered gradient. [Visual hierarchy](https://www.nngroup.com/articles/principles-visual-design/) · [Front-loading](https://service-manual.ons.gov.uk/content/writing-for-users/structuring-content) · [W3C contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
 
 ## Adapt the copy to the platform
 
 - **WhatsApp.** Use 5:3 for chat graphics. Keep the time, room and tappable link in the message. For Status, use the vertical layout and preview it in the app. [WhatsApp Status guidance](https://faq.whatsapp.com/643144237275579/)
 - **X.** Lead with something people can make or try. Use the 5:3 card as a single photo, include one direct link and add concise alt text. Keep within the standard 280-character limit. [X photos](https://help.x.com/en/using-x/posting-gifs-and-pictures) · [X image descriptions](https://help.x.com/en/using-x/picture-descriptions)
-- **Instagram.** Use one idea per slide. For registration, confirm the bio link for feed posts and reserve the lower Story area for the native link sticker. Keep carousel slides at 4:5 and use one visual treatment across a swipe sequence.
+- **Instagram.** Use one idea per slide. For registration, confirm the bio link for feed posts and reserve the lower Story area for the native link sticker. Use the 4:5 carousel layouts below.
 - **LinkedIn.** Use the landscape card for a native image and the 1200 × 627 art for a link preview. Write about the student outcome or the specific partner contribution. Use an approved screenshot or photo when it adds proof. [LinkedIn preview guidance](https://www.linkedin.com/help/linkedin/answer/a566445/customize-the-image-and-title-of-a-linkedin-page-post-preview)
 - **Luma.** Keep the square cover to the title and society logo. Use native event fields for date, time, venue and registration. [Luma event covers](https://help.luma.com/p/event-cover-images)
 
+## Instagram carousels
+
+| Style | Opening | Inside slides | Closing |
+| --- | --- | --- | --- |
+| Navy covers and cream inside | Grainy navy cover with the hook | One wide grainy cream gradient, cropped into as many slides as the story needs | Grainy navy cover with one next step |
+| All navy | Grainy navy cover with the hook | Slices of the same grainy navy gradient across the whole carousel | Final navy slice with one next step |
+
+Write one idea per slide. Give the first slide the hook, use the middle slides for examples or steps, and put the next step on the last slide. For the mixed style, the cut from navy to cream at each cover is intentional. Inside, the SVGs share one gradient field and the PNG exporter renders that field once before it slices the slides. The grain continues across the swipe.
+
+Use the [editable JSON example](examples/instagram-carousel.json) or ask Grok for a JSON array with one slide brief per item. Use at least three slides for navy covers with cream inside, or two for all navy. Use a fresh output folder for each export. Results are numbered in swipe order. Omit `--png` if you only need editable SVGs.
+
+```bash
+python3 brand/quick-media.py out/mixed --brief brand/examples/instagram-carousel.json --carousel navy-cream --png
+python3 brand/quick-media.py out/navy --brief brand/examples/instagram-carousel.json --carousel all-navy --png
+```
+
 ## Give Grok one campaign brief
 
-> Read this page, the brand rules, the token file and the SVG masters. Use the confirmed facts below to write the requested captions and alt text. Return one visual JSON brief in the shape shown here. Keep headline wording and theme consistent across the exports. Confirm event logistics from Luma or the organiser. Flag conflicts and missing details that affect publishing. Use the actual SVG masters and logo artwork. If you use image generation for an illustration, add it separately and set all text and logos from the masters. Check the exported images and the actual signup route before marking the assets ready.
+> Read this page, the brand rules, the token file and the SVG masters. Use the confirmed facts below to write the requested captions and alt text. Return a visual JSON brief in the shape shown here. For an Instagram carousel, return an array of slide briefs and specify navy covers with cream inside or all navy. Keep headline wording and theme consistent across the exports. Confirm event logistics from Luma or the organiser. Flag conflicts and missing details that affect publishing. Use the actual SVG masters and logo artwork. If you use image generation for an illustration, add it separately and set all text and logos from the masters. Check the exported images and the actual signup route before marking the assets ready.
 
 Include the audience, goal, confirmed event name, date, time, room, requirements, direct URL, requested channels and any approved media in your message to Grok. Keep operational details and links in the captions. Use this JSON shape for the cards. The array holds one or two short title lines. The other fields are optional.
 
@@ -59,4 +75,4 @@ python3 brand/quick-media.py out --brief brief.json --theme navy --png
 
 The first command exports editable SVGs. The second also checks the rendered slots and exports PNGs using Inkscape. Use `--format landscape-5x3` to generate one size. The square cover uses only the title, and the link card uses the title, category and detail. The generator is for text cards. For a photo or screenshot, use the existing [showcase templates](README.md#instagram) or attach real media alongside the card. Confirm crop, type, contrast, alt text and live links in each platform’s composer before publishing.
 
-Before changing the templates, render one announcement, a room change, one recap without a footer and one long title. Check both themes and the Story sticker area. Keep the SVGs as the reusable outputs and regenerate them from the same source. [Cursor PStack](https://github.com/cursor/plugins/tree/main/pstack)
+Before changing the templates, render one announcement, a room change, one recap without a footer and one long title. Check both gradients, the Story sticker area and every interior carousel seam. Keep the SVGs as the reusable outputs and regenerate them from the same source. [Cursor PStack](https://github.com/cursor/plugins/tree/main/pstack)
