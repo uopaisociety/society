@@ -1,6 +1,6 @@
 # AI Society brand instructions for agents
 
-Read [README.md](README.md) and [tokens.json](tokens.json) before editing social copy or artwork. Use AI Society for short references, University of Portsmouth AI Society on formal materials, and @uopaisociety on social.
+Read [README.md](README.md), [QUICK-MEDIA.md](QUICK-MEDIA.md) and [tokens.json](tokens.json) before editing social copy or artwork. Use AI Society for short references, University of Portsmouth AI Society on formal materials, and @uopaisociety on social.
 
 ## A. Brand Voice & Anti-Slop Copywriting Protocol
 
@@ -14,7 +14,7 @@ Read [README.md](README.md) and [tokens.json](tokens.json) before editing social
 
 ### 1. WhatsApp Community (Highest Priority Conversion Channel)
 
-Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/whatsapp-banner-2x1.svg), [reminder](templates/whatsapp-reminder-2x1.svg) or [showcase](templates/whatsapp-showcase-2x1.svg). For Status use the shared [9:16 layout](templates/ig-story-status-9x16.svg). Pair a chat graphic with:
+For new WhatsApp chat graphics, use the 1500 × 900 (5:3) [quick landscape templates](QUICK-MEDIA.md#pick-a-template). Use the [9:16 layout](QUICK-MEDIA.md#pick-a-template) for Status. Pair a chat graphic with:
 
 1. A one-line hook that says what is happening and when.
 2. Two or three short lines describing what participants do and what they need. Use “No coding needed, just bring a laptop” when that is accurate.
@@ -23,10 +23,10 @@ Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/w
 
 | When | Message |
 | --- | --- |
-| T−7 days | Teaser, 2:1 banner and a native WhatsApp poll |
-| T−5 days | Sign-ups open, Luma link, 2:1 banner and prerequisite checklist such as a GitHub account or student AI tools |
-| T−2 days | Starter repo or playable teaser with a 2:1 showcase banner using the actual screenshot |
-| Day of, T−3 hours | Short reminder with the time, 2:1 banner, location and a charger reminder |
+| T−7 days | Teaser, 5:3 card and a native WhatsApp poll |
+| T−5 days | Sign-ups open, Luma link, 5:3 card and prerequisite checklist such as a GitHub account or student AI tools |
+| T−2 days | Starter repo or playable teaser with a 5:3 card and a real project screenshot |
+| Day of, T−3 hours | Short reminder with the time, 5:3 card, location and a charger reminder |
 
 ### 2. Instagram (@uopaisociety)
 
@@ -37,11 +37,15 @@ Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/w
 
 ### 3. LinkedIn (University of Portsmouth AI Society)
 
-Use the 2400 × 1256 [Open Graph card](templates/social-og-card.svg) or 1600 × 800 [showcase banner](templates/whatsapp-showcase-2x1.svg). Write for industry partners, Gradcracker employers and student engineers. Lead with a shipped repo, practical engineering work, an observable workshop outcome or evidence of society activity. Use short paragraphs and one CTA.
+Use the 1500 × 900 quick landscape card for a native image and the 1200 × 627 quick link card for a preview. See the [quick formats](QUICK-MEDIA.md#pick-a-template). Write for industry partners, Gradcracker employers and student engineers. Lead with a shipped repo, practical engineering work, an observable workshop outcome or evidence of society activity. Use short paragraphs and one CTA.
 
-### 4. Luma & GitHub Repositories
+### 4. X (@uopaisociety)
 
-Luma is canonical for event dates, times, rooms and registration questions. GitHub is canonical for starter code and the live GitHub Pages demo. Before generating social copy or artwork, check that every template agrees on the date, 24-hour UK time, room code and destination URLs. Clear optional placeholder copy when a detail does not apply. Use confirmed logistics and live destinations in published artwork.
+Use the 1500 × 900 quick landscape card as a single image. Lead with what people can build or try. Use one direct destination, the standard 280-character compose limit and descriptive alt text.
+
+### 5. Luma & GitHub Repositories
+
+Use the square 1080 × 1080 quick cover for Luma events. Put logistics in native event fields. Luma is canonical for event dates, times, rooms and registration questions. GitHub is canonical for starter code and the live GitHub Pages demo. Before generating social copy or artwork, check that every template agrees on the date, 24-hour UK time, room code and destination URLs. Clear optional placeholder copy when a detail does not apply. Use confirmed logistics and live destinations in published artwork.
 
 ## C. Programmatic SVG-to-PNG Workflow for Agents
 
