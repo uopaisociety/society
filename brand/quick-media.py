@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate editable AI Society cards and Instagram carousels."""
 import argparse
+import base64
 import csv
 from copy import deepcopy
 import json
@@ -23,7 +24,7 @@ LAYOUTS = {
     "landscape-5x3": dict(logo=112, lead=190, title=320, size=112, detail=510, line=637, footer=715, type=50),
     "feed-4x5": dict(logo=116, lead=292, title=493, size=114, detail=760, line=933, footer=1030, type=47),
     "story-9x16": dict(logo=116, lead=460, title=650, size=114, detail=912, line=1062, footer=1155, type=47),
-    "luma-1x1": dict(logo=144, title=535, size=110),
+    "luma-1x1": dict(logo=116, title=240, size=124, detail=459, type=52),
     "link-1200x627": dict(logo=90, lead=128, title=229, size=89, detail=424, type=37),
 }
 EXAMPLE = {
@@ -94,7 +95,45 @@ def add_background(root, defs, treatment, width, height, panel, panel_count):
             opacity=TOKENS["grain"]["opacity"][treatment])
 
 
-def compose(format_name, theme_name, slots, panel=0, panel_count=1):
+def read_cover_art(path):
+    if path.stat().st_size > 8 * 1024 * 1024:
+        raise ValueError("Use a cover image no larger than 8 MiB.")
+    data = path.read_bytes()
+    if data.startswith(b"\x89PNG\r\n\x1a\n"):
+        mime = "image/png"
+    elif data.startswith(b"\xff\xd8\xff"):
+        mime = "image/jpeg"
+    else:
+        raise ValueError("Cover art must be a PNG or JPEG image.")
+    return f"data:{mime};base64,{base64.b64encode(data).decode('ascii')}"
+
+
+def add_luma_art(root, defs, theme, cover_art):
+    """Frame the event's artwork, or show the official wave motif."""
+    if cover_art:
+        clip = element(defs, "clipPath", id="cover-art-clip")
+        element(clip, "rect", x=485, y=562, width=452, height=327, rx=19)
+    frame = element(root, "g", id="cover-art", transform="rotate(-7 711 726)", aria_hidden="true")
+    bg = TOKENS["colors"]["marine-navy" if theme == "navy" else "cream"]
+    fg = TOKENS["colors"][MEDIA["themes"][theme]["foreground"]]
+    if cover_art:
+        element(frame, "rect", x=474, y=551, width=474, height=349, rx=29, fill=fg)
+        element(frame, "rect", x=485, y=562, width=452, height=327, rx=19, fill=bg)
+        element(frame, "image", href=cover_art, x=485, y=562, width=452, height=327,
+                preserveAspectRatio="xMidYMid slice", clip_path="url(#cover-art-clip)")
+        return
+
+    mark_source = ET.parse(BRAND / "logos/logo-mark.svg").getroot()
+    mark = mark_source.find(f".//{{{SVG}}}symbol")
+    for node in mark.iter():
+        if "id" in node.attrib:
+            node.set("id", f"cover-{node.get('id')}")
+    defs.append(mark)
+    element(frame, "rect", x=474, y=551, width=474, height=349, rx=29, fill=fg)
+    element(frame, "use", href=f"#{mark.get('id')}", x=550, y=612, width=319, height=227, color=bg)
+
+
+def compose(format_name, theme_name, slots, panel=0, panel_count=1, cover_art=None):
     spec = MEDIA["formats"][format_name]
     width, height = spec["width"], spec["height"]
     x, y = (spec["safeInset"][axis] for axis in ("x", "y"))
@@ -118,8 +157,8 @@ def compose(format_name, theme_name, slots, panel=0, panel_count=1):
     defs.append(logo)
     add_background(root, defs, theme["gradient"], width, height, panel, panel_count)
     logo_width = layout["logo"]
-    logo_x = (width - logo_width) // 2 if is_cover else width - x - logo_width
-    element(root, "use", href="#brand-logo", x=logo_x, y=y, width=logo_width,
+    logo_x, logo_y = (x, height - y - round(logo_width * 583 / 692)) if is_cover else (width - x - logo_width, y)
+    element(root, "use", href="#brand-logo", x=logo_x, y=logo_y, width=logo_width,
             height=round(logo_width * 583 / 692), color=fg, id="logo", aria_hidden="true")
 
     def draw(slot, at_x, at_y, size, anchor="start"):
@@ -132,10 +171,14 @@ def compose(format_name, theme_name, slots, panel=0, panel_count=1):
     title_size = layout["size"]
     first_line = layout["title"] + (0 if slots.get("headline-2") else title_size // 2)
     if is_cover:
-        draw("headline-1", width // 2, first_line, title_size, "middle")
-        draw("headline-2", width // 2, layout["title"] + title_size, title_size, "middle")
-        # The Luma thumbnail carries the title and identity. Native fields carry logistics.
-        root.find(f"{{{SVG}}}desc").text = "University of Portsmouth AI Society event cover"
+        add_luma_art(root, defs, theme_name, cover_art)
+        draw("headline-1", x + 10, layout["title"], title_size)
+        draw("headline-2", x + 10, layout["title"] + title_size, title_size)
+        detail_y = layout["detail"] if slots.get("headline-2") else layout["detail"] - title_size
+        draw("detail", x + 10, detail_y, layout["type"])
+        root.find(f"{{{SVG}}}desc").text = " · ".join(filter(None, (
+            slots.get("detail"), "University of Portsmouth AI Society event cover"
+        )))
         return root
 
     draw("lead", x, layout["lead"], round(layout["type"] * .74))
@@ -175,6 +218,8 @@ def verify_layout(svg_path, root, format_name):
     output = subprocess.run(["inkscape", str(svg_path), "--query-all"],
                             capture_output=True, text=True, check=True).stdout
     active = {"logo"} | {node.get("id") for node in root.findall(f"{{{SVG}}}text") if node.text}
+    if format_name == "luma-1x1":
+        active.add("cover-art")
     bounds = {row[0]: tuple(map(float, row[1:])) for row in csv.reader(output.splitlines())
               if len(row) == 5 and row[0] in active}
     if bounds.keys() != active:
@@ -237,12 +282,16 @@ def main():
     parser.add_argument("--format", choices=MEDIA["formats"], action="append", help="Omit to generate all formats.")
     parser.add_argument("--carousel", choices=("navy-cream", "all-navy"),
                         help="Generate an Instagram carousel from a JSON array of slide briefs.")
+    parser.add_argument("--cover-art", type=Path, help="Optional PNG or JPEG for the square Luma cover.")
     parser.add_argument("--png", action="store_true", help="Check layout and export PNGs using Inkscape.")
     args = parser.parse_args()
     if args.carousel and (not args.brief or args.format or args.theme):
         parser.error("--carousel requires --brief and sets its own format and themes.")
+    if args.cover_art and (args.carousel or (args.format and "luma-1x1" not in args.format)):
+        parser.error("--cover-art requires a square Luma export.")
     args.output.mkdir(parents=True, exist_ok=True)
     try:
+        cover_art = read_cover_art(args.cover_art) if args.cover_art else None
         data = json.loads(args.brief.read_text(encoding="utf-8")) if args.brief else EXAMPLE
         with tempfile.TemporaryDirectory(dir=args.output) as work:
             stage = Path(work)
@@ -256,7 +305,8 @@ def main():
                 for format_name in dict.fromkeys(args.format or MEDIA["formats"]):
                     for theme in (args.theme,) if args.theme else MEDIA["themes"]:
                         path = stage / f"{format_name}-{theme}.svg"
-                        write_card(path, compose(format_name, theme, slots), format_name, args.png, cache)
+                        card = compose(format_name, theme, slots, cover_art=cover_art)
+                        write_card(path, card, format_name, args.png, cache)
             for path in sorted(stage.glob("*.svg")) + sorted(stage.glob("*.png")):
                 os.replace(path, args.output / path.name)
                 print(path.name)
