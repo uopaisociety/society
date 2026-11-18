@@ -45,7 +45,7 @@ Use the 1500 × 900 quick landscape card as a single image. Lead with what peopl
 
 ### 5. Luma & GitHub Repositories
 
-Use the square 1080 × 1080 quick cover for Luma events. Put logistics in native event fields. Luma is canonical for event dates, times, rooms and registration questions. GitHub is canonical for starter code and the live GitHub Pages demo. Before generating social copy or artwork, check that every template agrees on the date, 24-hour UK time, room code and destination URLs. Clear optional placeholder copy when a detail does not apply. Use confirmed logistics and live destinations in published artwork.
+Use the [square Luma cover](QUICK-MEDIA.md#luma-event-covers) with a large title, optional edition line and one focal visual. Put logistics in native event fields. Luma is canonical for event dates, times, rooms and registration questions. GitHub is canonical for starter code and the live GitHub Pages demo. Before generating social copy or artwork, check that every template agrees on the date, 24-hour UK time, room code and destination URLs. Clear optional placeholder copy when a detail does not apply. Use confirmed logistics and live destinations in published artwork.
 
 ## C. Programmatic SVG-to-PNG Workflow for Agents
 
