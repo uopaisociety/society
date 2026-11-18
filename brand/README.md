@@ -4,7 +4,7 @@ Use **AI Society** in everyday copy, **University of Portsmouth AI Society** on 
 
 ## Quick social media
 
-Use the [quick SVG templates](QUICK-MEDIA.md) for everyday posts. Alternate navy and cream between posts and keep one theme across the exports of each announcement. The WhatsApp landscape default is 1500 × 900 (5:3), and Luma event covers are square. The quick guide includes the Grok brief, copy rules and PNG export command.
+Use the [quick SVG templates](QUICK-MEDIA.md) for everyday posts. Alternate the official grainy navy and cream gradients between posts. Keep one gradient across the exports of each announcement. The [Instagram carousel presets](QUICK-MEDIA.md#instagram-carousels) offer navy covers with a continuous cream interior or a continuous all-navy deck. The WhatsApp landscape default is 1500 × 900 (5:3), and Luma event covers are square. The quick guide includes the Grok brief, copy rules and PNG export command.
 
 ## Visual identity
 
