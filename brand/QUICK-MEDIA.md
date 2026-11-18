@@ -31,7 +31,19 @@ Give the headline the most space. Use one detail line to say who it is for, what
 - **X.** Lead with something people can make or try. Use the 5:3 card as a single photo, include one direct link and add concise alt text. Keep within the standard 280-character limit. [X photos](https://help.x.com/en/using-x/posting-gifs-and-pictures) · [X image descriptions](https://help.x.com/en/using-x/picture-descriptions)
 - **Instagram.** Use one idea per slide. For registration, confirm the bio link for feed posts and reserve the lower Story area for the native link sticker. Use the 4:5 carousel layouts below.
 - **LinkedIn.** Use the landscape card for a native image and the 1200 × 627 art for a link preview. Write about the student outcome or the specific partner contribution. Use an approved screenshot or photo when it adds proof. [LinkedIn preview guidance](https://www.linkedin.com/help/linkedin/answer/a566445/customize-the-image-and-title-of-a-linkedin-page-post-preview)
-- **Luma.** Keep the square cover to the title and society logo. Use native event fields for date, time, venue and registration. [Luma event covers](https://help.luma.com/p/event-cover-images)
+- **Luma.** Use the event title, optional short edition or topic, one image and the society mark. Use native event fields for date, time, venue and registration. [Luma event covers](https://help.luma.com/p/event-cover-images)
+
+## Luma event covers
+
+Use the 1080 × 1080 square. Lead with one or two short, left-aligned title lines. Add an edition or topic only if it helps identify the event. Let one real visual carry the lower half, such as a screenshot of what people will build or a portrait of the speaker. With no artwork supplied, the card uses the official wave. Use the original navy or cream gradient through the whole cover.
+
+Luma recommends at least 800 × 800, minimal text and space around the edges for rounded corners. Keep the logo and the recognisable part of the visual inside the guide. Test the title and focal image in a small preview. Use the Luma listing for timing, eligibility, venue and signup. [Luma cover guidelines](https://help.luma.com/p/event-cover-images) · [Visual hierarchy](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/)
+
+Use `detail` for the optional edition line and supply one PNG or JPEG if you have event artwork. The export centres and crops the image inside the rounded frame. Choose an image with its subject clear of the edges.
+
+```bash
+python3 brand/quick-media.py out/luma --brief brief.json --format luma-1x1 --cover-art artwork.png --png
+```
 
 ## Instagram carousels
 
@@ -73,6 +85,6 @@ python3 brand/quick-media.py out --brief brief.json --theme navy
 python3 brand/quick-media.py out --brief brief.json --theme navy --png
 ```
 
-The first command exports editable SVGs. The second also checks the rendered slots and exports PNGs using Inkscape. Use `--format landscape-5x3` to generate one size. The square cover uses only the title, and the link card uses the title, category and detail. The generator is for text cards. For a photo or screenshot, use the existing [showcase templates](README.md#instagram) or attach real media alongside the card. Confirm crop, type, contrast, alt text and live links in each platform’s composer before publishing.
+The first command exports editable SVGs. The second also checks the rendered slots and exports PNGs using Inkscape. Use `--format landscape-5x3` to generate one size. The square cover uses the title, optional detail and one visual. The link card uses the title, category and detail. The generator is for text cards. For a photo or screenshot, use the existing [showcase templates](README.md#instagram) or attach real media alongside the card. Confirm crop, type, contrast, alt text and live links in each platform’s composer before publishing.
 
 Before changing the templates, render one announcement, a room change, one recap without a footer and one long title. Check both gradients, the Story sticker area and every interior carousel seam. Keep the SVGs as the reusable outputs and regenerate them from the same source. [Cursor PStack](https://github.com/cursor/plugins/tree/main/pstack)
