@@ -31,7 +31,7 @@ For new WhatsApp chat graphics, use the 1500 × 900 (5:3) [quick landscape templ
 ### 2. Instagram (@uopaisociety)
 
 - Use 4:5 (1080 × 1350) for [portrait event posts](templates/ig-post-event-4x5.svg) and every slide in a [feed carousel](templates/). Use the [9:16 Story](templates/ig-story-status-9x16.svg) for vertical updates. Use a real screenshot in the rounded frame on showcase slides. Keep essential Story content within the safe insets and add the native link sticker in the app.
-- Give a carousel one continuous background, split across the slides. Design it as a single canvas of N × 1080 by 1350 and crop it into N slides, using [ig-carousel-background-4x5.svg](templates/ig-carousel-background-4x5.svg) as the pattern. Keep text and logos inside each slide's safe insets and clear of the seams. Use cream lettering on the marine end and navy lettering on the cream end.
+- Use the [Instagram carousel presets](QUICK-MEDIA.md#instagram-carousels). For navy covers with a cream interior, use the navy mesh for the opening and closing slides and crop one continuous cream field across the middle slides. For all navy, crop one continuous navy field across every slide. Keep text and logos inside the safe insets.
 - Keep to one idea and at most 12 words of editable copy per slide, including logistics and CTA. Shorten the headline or CTA when adding room and time.
 - Keep captions under 60 words. Put the hook on line one, follow with two sentences, give the date, time and location, and end with “Sign up via link in bio.”
 
