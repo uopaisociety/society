@@ -14,7 +14,7 @@ Read [README.md](README.md) and [tokens.json](tokens.json) before editing social
 
 ### 1. WhatsApp Community (Highest Priority Conversion Channel)
 
-Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/whatsapp-banner-2x1.svg), [reminder](templates/whatsapp-reminder-2x1.svg) or [showcase](templates/whatsapp-showcase-2x1.svg). For Status use the shared [9:16 layout](templates/ig-story-status-9x16.svg). Pair a chat graphic with:
+Every major WhatsApp announcement needs a **5:3 (1800 × 1080)** chat graphic, which is the default WhatsApp format. Use the legacy 2:1 [banner](templates/whatsapp-banner-2x1.svg), [reminder](templates/whatsapp-reminder-2x1.svg) or [showcase](templates/whatsapp-showcase-2x1.svg) layouts as a guide, rebuilt at 1800 × 1080. For Status use the shared [9:16 layout](templates/ig-story-status-9x16.svg). Pair a chat graphic with:
 
 1. A one-line hook that says what is happening and when.
 2. Two or three short lines describing what participants do and what they need. Use “No coding needed, just bring a laptop” when that is accurate.
@@ -23,10 +23,10 @@ Every major WhatsApp announcement needs a 1600 × 800 (2:1) [banner](templates/w
 
 | When | Message |
 | --- | --- |
-| T−7 days | Teaser, 2:1 banner and a native WhatsApp poll |
-| T−5 days | Sign-ups open, Luma link, 2:1 banner and prerequisite checklist such as a GitHub account or student AI tools |
-| T−2 days | Starter repo or playable teaser with a 2:1 showcase banner using the actual screenshot |
-| Day of, T−3 hours | Short reminder with the time, 2:1 banner, location and a charger reminder |
+| T−7 days | Teaser, 5:3 banner and a native WhatsApp poll |
+| T−5 days | Sign-ups open, Luma link, 5:3 banner and prerequisite checklist such as a GitHub account or student AI tools |
+| T−2 days | Starter repo or playable teaser with a 5:3 showcase banner using the actual screenshot |
+| Day of, T−3 hours | Short reminder with the time, 5:3 banner, location and a charger reminder |
 
 ### 2. Instagram (@uopaisociety)
 

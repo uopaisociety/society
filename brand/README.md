@@ -30,6 +30,8 @@ The SVGs use the original wave-mark and lettering outlines. Give the logo breath
 
 ## WhatsApp
 
+**Default chat image: 5:3 landscape, 1800 × 1080.** Use this ratio for every WhatsApp chat graphic unless a post explicitly needs something else. WhatsApp can't swap an image after it's sent, so get the ratio right first. The 2:1 templates below are legacy layouts. Rebuild them at 1800 × 1080 and keep their treatment and safe insets (80 px sides, 72 px top and bottom, scaled proportionally).
+
 | Delivery | Template | Size | Treatment |
 | --- | --- | --- | --- |
 | Announce a workshop, collaboration or sign-up | [Announcement](templates/whatsapp-banner-2x1.svg) | 1600 × 800 | Hybrid |
