@@ -1,0 +1,7 @@
+[
+  {"lead": "WORKSHOP", "title": ["Build a", "tiny game"], "detail": "No coding experience needed."},
+  {"title": ["Start with", "a simple game"], "detail": "Play the starter before you change it."},
+  {"title": ["Change one", "thing"], "detail": "Try a new rule, look or character."},
+  {"title": ["Play each", "other’s games"], "detail": "See what everyone made."},
+  {"title": ["Join the jam"], "when": "Thu 12 Mar · 18:30", "where": "Ravelin Library", "action": "Sign up in bio"}
+]
