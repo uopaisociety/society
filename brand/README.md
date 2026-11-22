@@ -4,7 +4,7 @@ Use **AI Society** in everyday copy, **University of Portsmouth AI Society** on 
 
 ## Quick social media
 
-Use the [quick SVG templates](QUICK-MEDIA.md) for everyday posts. Alternate the official grainy navy and cream gradients between posts. Keep one gradient across the exports of each announcement. The [Instagram carousel presets](QUICK-MEDIA.md#instagram-carousels) offer navy covers with a continuous cream interior or a continuous all-navy deck. The WhatsApp landscape default is 1500 × 900 (5:3), and Luma event covers are square. The quick guide includes the Grok brief, copy rules and PNG export command.
+Use the [quick SVG templates](QUICK-MEDIA.md) for everyday posts. Alternate the official grainy navy and cream gradients between posts. Keep one gradient across the exports of each announcement. The [Instagram carousel presets](QUICK-MEDIA.md#instagram-carousels) offer navy covers with a continuous cream interior or a continuous all-navy deck. The WhatsApp default is always 5:3 landscape, exported at 1800 × 1080, and Luma event covers are square. The quick guide includes the Grok brief, copy rules and PNG export command.
 
 ## Visual identity
 
@@ -35,6 +35,8 @@ The SVGs use the original wave-mark and lettering outlines. Give the logo breath
 ## WhatsApp campaign layouts
 
 For new chat graphics, use the [5:3 quick templates](QUICK-MEDIA.md#pick-a-template). The older wider assets below are available for existing campaigns.
+
+**Default chat image: 5:3 landscape, 1800 × 1080.** Use this ratio for every WhatsApp chat graphic unless a post explicitly needs something else. WhatsApp can't swap an image after it's sent, so get the ratio right first. Start from the 5:3 [quick landscape templates](QUICK-MEDIA.md#pick-a-template). The 2:1 templates below are legacy layouts. Rebuild them at 1800 × 1080 and keep their treatment and safe insets (80 px sides, 72 px top and bottom, scaled proportionally).
 
 | Delivery | Template | Size | Treatment |
 | --- | --- | --- | --- |

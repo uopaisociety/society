@@ -14,7 +14,7 @@ Read [README.md](README.md), [QUICK-MEDIA.md](QUICK-MEDIA.md) and [tokens.json](
 
 ### 1. WhatsApp Community (Highest Priority Conversion Channel)
 
-For new WhatsApp chat graphics, use the 1500 × 900 (5:3) [quick landscape templates](QUICK-MEDIA.md#pick-a-template). Use the [9:16 layout](QUICK-MEDIA.md#pick-a-template) for Status. Pair a chat graphic with:
+Every WhatsApp chat graphic is **5:3 landscape, exported at 1800 × 1080**. Never portrait. Start from the 5:3 [quick landscape templates](QUICK-MEDIA.md#pick-a-template) and export them at 1800 × 1080. Use the [9:16 layout](QUICK-MEDIA.md#pick-a-template) for Status. Pair a chat graphic with:
 
 1. A one-line hook that says what is happening and when.
 2. Two or three short lines describing what participants do and what they need. Use “No coding needed, just bring a laptop” when that is accurate.
