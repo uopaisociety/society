@@ -2,6 +2,10 @@
 
 Use **AI Society** in everyday copy, **University of Portsmouth AI Society** on formal materials, and **@uopaisociety** for the social handle. The society tagline is **GOOD IDEAS *BELONG HERE.***
 
+## Quick social media
+
+Use the [quick SVG templates](QUICK-MEDIA.md) for everyday posts. Alternate the official grainy navy and cream gradients between posts. Keep one gradient across the exports of each announcement. The [Instagram carousel presets](QUICK-MEDIA.md#instagram-carousels) offer navy covers with a continuous cream interior or a continuous all-navy deck. The WhatsApp default is always 5:3 landscape, exported at 1800 × 1080, and Luma event covers are square. The quick guide includes the Grok brief, copy rules and PNG export command.
+
 ## Visual identity
 
 | Token | Colour | Use |
@@ -28,9 +32,11 @@ The social pack uses three grainy backgrounds. **Marine** uses broad cream-tinte
 
 The SVGs use the original wave-mark and lettering outlines. Give the logo breathing room and keep its proportions. The marine-navy [stacked logo](logo.svg) and [university lockup](lockup-uop.svg) are available for light backgrounds. Use the original [textured avatar](avatar-textured.svg) for profile pictures and the original [marine gradient](background.svg) where earlier collateral calls for it.
 
-## WhatsApp
+## WhatsApp campaign layouts
 
-**Default chat image: 5:3 landscape, 1800 × 1080.** Use this ratio for every WhatsApp chat graphic unless a post explicitly needs something else. WhatsApp can't swap an image after it's sent, so get the ratio right first. The 2:1 templates below are legacy layouts. Rebuild them at 1800 × 1080 and keep their treatment and safe insets (80 px sides, 72 px top and bottom, scaled proportionally).
+For new chat graphics, use the [5:3 quick templates](QUICK-MEDIA.md#pick-a-template). The older wider assets below are available for existing campaigns.
+
+**Default chat image: 5:3 landscape, 1800 × 1080.** Use this ratio for every WhatsApp chat graphic unless a post explicitly needs something else. WhatsApp can't swap an image after it's sent, so get the ratio right first. Start from the 5:3 [quick landscape templates](QUICK-MEDIA.md#pick-a-template). The 2:1 templates below are legacy layouts. Rebuild them at 1800 × 1080 and keep their treatment and safe insets (80 px sides, 72 px top and bottom, scaled proportionally).
 
 | Delivery | Template | Size | Treatment |
 | --- | --- | --- | --- |
@@ -62,8 +68,10 @@ A carousel uses one background, drawn once and split across the slides, so the s
 
 | Delivery | Template | Size | Treatment |
 | --- | --- | --- | --- |
-| Luma event cover or presentation title slide | [Luma cover](templates/luma-cover-16x9.svg) | 1920 × 1080 | Marine |
-| LinkedIn, GitHub or Open Graph link preview | [Social preview](templates/social-og-card.svg) | 2400 × 1256 | Hybrid |
+| Luma event cover | [Square cover](QUICK-MEDIA.md#pick-a-template) | 1080 × 1080 | Navy or cream |
+| Presentation title slide | [Widescreen cover](templates/luma-cover-16x9.svg) | 1920 × 1080 | Marine |
+| LinkedIn Page link preview | [Quick link card](QUICK-MEDIA.md#pick-a-template) | 1200 × 627 | Navy or cream |
+| GitHub or Open Graph link preview | [Social preview](templates/social-og-card.svg) | 2400 × 1256 | Hybrid |
 | Students’ Union society page header | [UPSU header](templates/upsu-header.svg) | 1640 × 856 | Cream |
 
 Fill the slots that suit the post and clear unused placeholders. For events, use the confirmed date, time, venue and direct link from the Luma listing. For demos, use the playable project link where available.
